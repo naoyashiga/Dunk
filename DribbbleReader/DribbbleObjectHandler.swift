@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+//import WebImage
 
 class DribbleObjectHandler {
     
@@ -18,14 +19,17 @@ class DribbleObjectHandler {
             var data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
             
             var image: UIImage?
+            var sdImageView: UIImageView?
             
             if data != nil {
                 shot.imageData = data
                 image = UIImage(data: data!)!
             }
             
+            imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
+            
             dispatch_async(dispatch_get_main_queue()){
-                imageView.image = image
+//                imageView.image = image
             }
         }
     }
