@@ -8,9 +8,14 @@
 
 import UIKit
 
+let reuseIdentifier_Shot = "ShotCell"
 
 class ShotViewController: UICollectionViewController {
-    let reuseIdentifier = "ShotCell"
+    var shots:[Shot] = [Shot]() {
+        didSet{
+            self.collectionView?.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +25,12 @@ class ShotViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier_Shot)
+        
+        
+        DribbleObjectHandler.getShots(Config.SHOT_URL, callback: {(shots) -> Void in
+            self.shots = shots
+        })
 
         // Do any additional setup after loading the view.
     }
@@ -50,22 +60,25 @@ class ShotViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return 5
+        return shots.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! UICollectionViewCell
         
-        let url = NSURL(string: "https://d13yacurqjgara.cloudfront.net/users/4291/screenshots/2065465/screen_shot_2015-05-15_at_2.07.48_pm.png");
-        var err: NSError?;
-        var imageData :NSData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!;
-        var img = UIImage(data:imageData);
+        let shot = shots[indexPath.row]
+//        let url = NSURL(string: shot.imageUrl)
+//        var err: NSError?;
+//        var imageData :NSData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!;
+//        var img = UIImage(data:imageData);
+//        
+//        let iv:UIImageView = UIImageView(image:img);
+//        iv.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height / 3);
         
-        let iv:UIImageView = UIImageView(image:img);
-        iv.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height / 3);
-        
-        cell.contentView.addSubview(iv)
+//        cell.contentView.addSubview(iv)
         cell.contentView.backgroundColor = UIColor.yellowColor()
+        
+        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell)
     
         // Configure the cell
     

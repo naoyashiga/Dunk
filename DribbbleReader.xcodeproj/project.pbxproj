@@ -15,6 +15,12 @@
 		9AF6AB7B1B0824C000FD07E6 /* DribbbleReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB7A1B0824C000FD07E6 /* DribbbleReaderTests.swift */; };
 		9AF6AB851B0826D100FD07E6 /* PageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */; };
 		9AF6AB871B08299E00FD07E6 /* ShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */; };
+		9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB891B0881AE00FD07E6 /* Config.swift */; };
+		9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */; };
+		9AF6AB901B0884C800FD07E6 /* DribbbleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */; };
+		9AF6AB921B08850700FD07E6 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB911B08850700FD07E6 /* Shot.swift */; };
+		9AF6AB951B0885FB00FD07E6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB941B0885FB00FD07E6 /* Utils.swift */; };
+		9AF6AB971B0888BE00FD07E6 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB961B0888BE00FD07E6 /* HttpService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,12 @@
 		9AF6AB7A1B0824C000FD07E6 /* DribbbleReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleReaderTests.swift; sourceTree = "<group>"; };
 		9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewController.swift; sourceTree = "<group>"; };
 		9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotViewController.swift; sourceTree = "<group>"; };
+		9AF6AB891B0881AE00FD07E6 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleObjectHandler.swift; sourceTree = "<group>"; };
+		9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleBase.swift; sourceTree = "<group>"; };
+		9AF6AB911B08850700FD07E6 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		9AF6AB941B0885FB00FD07E6 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		9AF6AB961B0888BE00FD07E6 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +96,9 @@
 				9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */,
 				9AF6AB661B0824C000FD07E6 /* ViewController.swift */,
 				9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */,
+				9AF6AB881B08818800FD07E6 /* Data and Model */,
 				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
+				9AF6AB931B0885CA00FD07E6 /* Helper */,
 				9AF6AB681B0824C000FD07E6 /* Main.storyboard */,
 				9AF6AB6B1B0824C000FD07E6 /* Images.xcassets */,
 				9AF6AB6D1B0824C000FD07E6 /* LaunchScreen.xib */,
@@ -116,6 +130,26 @@
 				9AF6AB791B0824C000FD07E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AF6AB881B08818800FD07E6 /* Data and Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AF6AB891B0881AE00FD07E6 /* Config.swift */,
+				9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */,
+				9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */,
+				9AF6AB911B08850700FD07E6 /* Shot.swift */,
+				9AF6AB961B0888BE00FD07E6 /* HttpService.swift */,
+			);
+			name = "Data and Model";
+			sourceTree = "<group>";
+		};
+		9AF6AB931B0885CA00FD07E6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9AF6AB941B0885FB00FD07E6 /* Utils.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +253,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF6AB871B08299E00FD07E6 /* ShotViewController.swift in Sources */,
+				9AF6AB901B0884C800FD07E6 /* DribbbleBase.swift in Sources */,
+				9AF6AB951B0885FB00FD07E6 /* Utils.swift in Sources */,
+				9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */,
+				9AF6AB921B08850700FD07E6 /* Shot.swift in Sources */,
 				9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */,
+				9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */,
 				9AF6AB651B0824C000FD07E6 /* AppDelegate.swift in Sources */,
 				9AF6AB851B0826D100FD07E6 /* PageCollectionViewController.swift in Sources */,
+				9AF6AB971B0888BE00FD07E6 /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
