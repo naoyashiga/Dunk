@@ -12,12 +12,16 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-n8-cpM">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-n8-cpM">
+                        <rect key="frame" x="100" y="75" width="200" height="150"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="3JT-n8-cpM" secondAttribute="centerX" id="djw-KL-6eR"/>
+                <constraint firstAttribute="centerY" secondItem="3JT-n8-cpM" secondAttribute="centerY" id="qfz-aS-8bI"/>
+            </constraints>
             <connections>
                 <outlet property="imageView" destination="3JT-n8-cpM" id="VQQ-Li-TP3"/>
             </connections>

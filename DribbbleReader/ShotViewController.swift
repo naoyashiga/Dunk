@@ -16,16 +16,16 @@ class ShotViewController: UICollectionViewController {
             self.collectionView?.reloadData()
         }
     }
+    
+    var cellWidth:CGFloat?
+    var cellHeight:CGFloat?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("ok")
+        
+        self.cellWidth = self.view.bounds.width
+        self.cellHeight = self.view.bounds.height / 2.5
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier_Shot)
         self.collectionView?.registerNib(UINib(nibName: "ShotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier_Shot)
         
         
@@ -33,7 +33,6 @@ class ShotViewController: UICollectionViewController {
             self.shots = shots
         })
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,26 +40,14 @@ class ShotViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        //#warning Incomplete method implementation -- Return the number of sections
         return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
         return shots.count
     }
 
@@ -68,29 +55,21 @@ class ShotViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
         
         let shot = shots[indexPath.row]
-//        let url = NSURL(string: shot.imageUrl)
-//        var err: NSError?;
-//        var imageData :NSData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!;
-//        var img = UIImage(data:imageData);
-//        
-//        let iv:UIImageView = UIImageView(image:img);
-//        iv.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height / 3);
         
-//        cell.contentView.addSubview(iv)
+        cell.imageView.bounds = CGRectMake(0, 0, self.cellWidth!, self.cellHeight!)
+        cell.imageView.frame = cell.imageView.bounds
+        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         cell.contentView.backgroundColor = UIColor.yellowColor()
         
         cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
 //        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell.imageView)
-    
-        // Configure the cell
     
         return cell
     }
 
     // MARK: UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        var pageViewRect = self.view.bounds
-        return CGSize(width: pageViewRect.width, height: pageViewRect.height / 3)
+        return CGSize(width: self.cellWidth!, height: self.cellHeight!)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
