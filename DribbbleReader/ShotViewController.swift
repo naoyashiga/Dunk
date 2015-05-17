@@ -79,8 +79,8 @@ class ShotViewController: UICollectionViewController {
 //        cell.contentView.addSubview(iv)
         cell.contentView.backgroundColor = UIColor.yellowColor()
         
-        cell.imageView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height / 3);
-        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell.imageView)
+        cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
+//        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell.imageView)
     
         // Configure the cell
     

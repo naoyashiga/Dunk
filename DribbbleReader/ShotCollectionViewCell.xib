@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-n8-cpM">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
