@@ -25,7 +25,8 @@ class ShotViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier_Shot)
+//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier_Shot)
+        self.collectionView?.registerNib(UINib(nibName: "ShotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier_Shot)
         
         
         DribbleObjectHandler.getShots(Config.SHOT_URL, callback: {(shots) -> Void in
@@ -64,7 +65,7 @@ class ShotViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
         
         let shot = shots[indexPath.row]
 //        let url = NSURL(string: shot.imageUrl)
@@ -78,7 +79,8 @@ class ShotViewController: UICollectionViewController {
 //        cell.contentView.addSubview(iv)
         cell.contentView.backgroundColor = UIColor.yellowColor()
         
-        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell)
+        cell.imageView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height / 3);
+        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell.imageView)
     
         // Configure the cell
     
