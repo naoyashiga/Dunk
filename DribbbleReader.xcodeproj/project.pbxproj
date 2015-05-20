@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D10302EA62ADA9CA4E3E75C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685D916259BF736EF98B33B5 /* libPods.a */; };
+		9A18637B1B08C32F0061BBF4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18637A1B08C32F0061BBF4 /* Color.swift */; };
 		9AF6AB651B0824C000FD07E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */; };
 		9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB661B0824C000FD07E6 /* ViewController.swift */; };
 		9AF6AB6A1B0824C000FD07E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB681B0824C000FD07E6 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		685D916259BF736EF98B33B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1863771B08AA810061BBF4 /* DribbbleReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DribbbleReader-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A18637A1B08C32F0061BBF4 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9AF6AB5F1B0824C000FD07E6 /* DribbbleReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF6AB631B0824C000FD07E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A1863781B08BD1F0061BBF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
+				9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9A1863791B08C30F0061BBF4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9AF6AB891B0881AE00FD07E6 /* Config.swift */,
+				9A18637A1B08C32F0061BBF4 /* Color.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		9AF6AB561B0824C000FD07E6 = {
 			isa = PBXGroup;
 			children = (
@@ -124,10 +144,9 @@
 			children = (
 				9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */,
 				9AF6AB661B0824C000FD07E6 /* ViewController.swift */,
-				9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */,
 				9AF6AB981B08927800FD07E6 /* View */,
 				9AF6AB881B08818800FD07E6 /* Data and Model */,
-				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
+				9A1863781B08BD1F0061BBF4 /* Controller */,
 				9AF6AB931B0885CA00FD07E6 /* Helper */,
 				9AF6AB681B0824C000FD07E6 /* Main.storyboard */,
 				9AF6AB6B1B0824C000FD07E6 /* Images.xcassets */,
@@ -166,7 +185,7 @@
 		9AF6AB881B08818800FD07E6 /* Data and Model */ = {
 			isa = PBXGroup;
 			children = (
-				9AF6AB891B0881AE00FD07E6 /* Config.swift */,
+				9A1863791B08C30F0061BBF4 /* Config */,
 				9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */,
 				9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */,
 				9AF6AB911B08850700FD07E6 /* Shot.swift */,
@@ -333,6 +352,7 @@
 				9AF6AB9B1B0892EF00FD07E6 /* ShotCollectionViewCell.swift in Sources */,
 				9AF6AB951B0885FB00FD07E6 /* Utils.swift in Sources */,
 				9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */,
+				9A18637B1B08C32F0061BBF4 /* Color.swift in Sources */,
 				9AF6AB921B08850700FD07E6 /* Shot.swift in Sources */,
 				9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */,
 				9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */,

@@ -23,6 +23,9 @@ class ShotViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setNavigationBar()
+        
+        
         self.cellWidth = self.view.bounds.width
         self.cellHeight = self.view.bounds.height / 2.5
 
@@ -33,6 +36,15 @@ class ShotViewController: UICollectionViewController {
             self.shots = shots
         })
 
+    }
+    
+    func setNavigationBar(){
+        self.navigationItem.title = "Dunk"
+        
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.navigationBarTitleTextColor()]
+        self.navigationController?.navigationBar.barTintColor = UIColor.navigationBarBackgroundColor()
+//        self.navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {
