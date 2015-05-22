@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D10302EA62ADA9CA4E3E75C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685D916259BF736EF98B33B5 /* libPods.a */; };
+		5FF41B4E2E3C59A3054C4E95 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3BA64114FF91D0306A0CC4 /* libPods.a */; };
+		9A0EBC311B0F4C10006FBD58 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EBC301B0F4C10006FBD58 /* CAPSPageMenu.swift */; };
+		9A0EBC331B0F4C80006FBD58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EBC321B0F4C80006FBD58 /* BaseViewController.swift */; };
+		9A0EBC381B0F59EC006FBD58 /* ShotCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EBC361B0F59EC006FBD58 /* ShotCollectionViewController.swift */; };
+		9A0EBC391B0F59EC006FBD58 /* ShotCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EBC371B0F59EC006FBD58 /* ShotCollectionViewController.xib */; };
 		9A18637B1B08C32F0061BBF4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18637A1B08C32F0061BBF4 /* Color.swift */; };
+		9ACEBA541B0CC1AA00F990EC /* controllerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */; };
+		9ACEBA561B0CC2D100F990EC /* PageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */; };
 		9AF6AB651B0824C000FD07E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */; };
 		9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB661B0824C000FD07E6 /* ViewController.swift */; };
 		9AF6AB6A1B0824C000FD07E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB681B0824C000FD07E6 /* Main.storyboard */; };
@@ -16,7 +22,6 @@
 		9AF6AB6F1B0824C000FD07E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB6D1B0824C000FD07E6 /* LaunchScreen.xib */; };
 		9AF6AB7B1B0824C000FD07E6 /* DribbbleReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB7A1B0824C000FD07E6 /* DribbbleReaderTests.swift */; };
 		9AF6AB851B0826D100FD07E6 /* PageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */; };
-		9AF6AB871B08299E00FD07E6 /* ShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */; };
 		9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB891B0881AE00FD07E6 /* Config.swift */; };
 		9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */; };
 		9AF6AB901B0884C800FD07E6 /* DribbbleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */; };
@@ -38,9 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		685D916259BF736EF98B33B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3BA64114FF91D0306A0CC4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A0EBC301B0F4C10006FBD58 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		9A0EBC321B0F4C80006FBD58 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9A0EBC361B0F59EC006FBD58 /* ShotCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCollectionViewController.swift; sourceTree = "<group>"; };
+		9A0EBC371B0F59EC006FBD58 /* ShotCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotCollectionViewController.xib; sourceTree = "<group>"; };
 		9A1863771B08AA810061BBF4 /* DribbbleReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DribbbleReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		9A18637A1B08C32F0061BBF4 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controllerScrollView.swift; sourceTree = "<group>"; };
+		9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollViewController.swift; sourceTree = "<group>"; };
 		9AF6AB5F1B0824C000FD07E6 /* DribbbleReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF6AB631B0824C000FD07E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +63,6 @@
 		9AF6AB791B0824C000FD07E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF6AB7A1B0824C000FD07E6 /* DribbbleReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleReaderTests.swift; sourceTree = "<group>"; };
 		9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewController.swift; sourceTree = "<group>"; };
-		9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotViewController.swift; sourceTree = "<group>"; };
 		9AF6AB891B0881AE00FD07E6 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleObjectHandler.swift; sourceTree = "<group>"; };
 		9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleBase.swift; sourceTree = "<group>"; };
@@ -70,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D10302EA62ADA9CA4E3E75C /* libPods.a in Frameworks */,
+				5FF41B4E2E3C59A3054C4E95 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +97,7 @@
 		195B288AB5D7F85E800A32D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				685D916259BF736EF98B33B5 /* libPods.a */,
+				0F3BA64114FF91D0306A0CC4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,7 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
-				9AF6AB861B08299E00FD07E6 /* ShotViewController.swift */,
+				9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */,
+				9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */,
+				9A0EBC361B0F59EC006FBD58 /* ShotCollectionViewController.swift */,
+				9A0EBC371B0F59EC006FBD58 /* ShotCollectionViewController.xib */,
+				9A0EBC321B0F4C80006FBD58 /* BaseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -153,6 +167,7 @@
 				9AF6AB6D1B0824C000FD07E6 /* LaunchScreen.xib */,
 				9A1863771B08AA810061BBF4 /* DribbbleReader-Bridging-Header.h */,
 				9AF6AB621B0824C000FD07E6 /* Supporting Files */,
+				9A0EBC301B0F4C10006FBD58 /* CAPSPageMenu.swift */,
 			);
 			path = DribbbleReader;
 			sourceTree = "<group>";
@@ -293,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0EBC391B0F59EC006FBD58 /* ShotCollectionViewController.xib in Resources */,
 				9AF6AB9C1B0892EF00FD07E6 /* ShotCollectionViewCell.xib in Resources */,
 				9AF6AB6A1B0824C000FD07E6 /* Main.storyboard in Resources */,
 				9AF6AB6F1B0824C000FD07E6 /* LaunchScreen.xib in Resources */,
@@ -347,16 +363,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF6AB871B08299E00FD07E6 /* ShotViewController.swift in Sources */,
 				9AF6AB901B0884C800FD07E6 /* DribbbleBase.swift in Sources */,
+				9A0EBC381B0F59EC006FBD58 /* ShotCollectionViewController.swift in Sources */,
+				9A0EBC311B0F4C10006FBD58 /* CAPSPageMenu.swift in Sources */,
 				9AF6AB9B1B0892EF00FD07E6 /* ShotCollectionViewCell.swift in Sources */,
 				9AF6AB951B0885FB00FD07E6 /* Utils.swift in Sources */,
+				9ACEBA561B0CC2D100F990EC /* PageScrollViewController.swift in Sources */,
 				9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */,
+				9ACEBA541B0CC1AA00F990EC /* controllerScrollView.swift in Sources */,
 				9A18637B1B08C32F0061BBF4 /* Color.swift in Sources */,
 				9AF6AB921B08850700FD07E6 /* Shot.swift in Sources */,
 				9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */,
 				9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */,
 				9AF6AB651B0824C000FD07E6 /* AppDelegate.swift in Sources */,
+				9A0EBC331B0F4C80006FBD58 /* BaseViewController.swift in Sources */,
 				9AF6AB851B0826D100FD07E6 /* PageCollectionViewController.swift in Sources */,
 				9AF6AB971B0888BE00FD07E6 /* HttpService.swift in Sources */,
 			);

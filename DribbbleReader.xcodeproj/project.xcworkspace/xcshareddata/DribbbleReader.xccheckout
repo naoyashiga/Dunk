@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4A2610CC-0CCB-420F-B193-A079BC3E54A5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>DribbbleReader</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D99BFE8CDBB4A009C45C938849BF73A412014A3B</key>
 		<string>https://bitbucket.org/naoyashiga/dribblereader.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DribbbleReader.xcodeproj/project.xcworkspace</string>
+	<string>DribbbleReader.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D99BFE8CDBB4A009C45C938849BF73A412014A3B</key>

@@ -31,4 +31,28 @@ extension UIColor {
     class func navigationBarBackgroundColor() -> UIColor {
         return UIColor.hexStr("EA4C89", alpha: 0.85)
     }
+    
+    class func scrollMenuBackgroundColor() -> UIColor {
+        return UIColor.hexStr("d4f0fd", alpha: 1)
+    }
+    
+    class func viewBackgroundColor() -> UIColor {
+        return UIColor.hexStr("186d93", alpha: 1)
+    }
+    
+    class func selectionIndicatorColor() -> UIColor {
+        return UIColor.hexStr("F06292", alpha: 1)
+    }
+    
+    class func bottomMenuHairlineColor() -> UIColor {
+        return UIColor.hexStr("F06292", alpha: 1)
+    }
+    
+    class func selectedMenuItemLabelColor() -> UIColor {
+        return UIColor.hexStr("145b7b", alpha: 1)
+    }
+    
+    class func unselectedMenuItemLabelColor() -> UIColor {
+        return UIColor.hexStr("3ebdf6", alpha: 1)
+    }
 }

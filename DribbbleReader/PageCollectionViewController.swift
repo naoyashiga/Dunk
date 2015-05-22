@@ -11,7 +11,8 @@ import UIKit
 let reuseIdentifier = "Cell"
 
 struct Pages {
-    var viewControllers:[ShotViewController] = []
+//    var viewControllers:[UIViewController] = []
+    var viewControllers:[ShotCollectionViewController] = []
 }
 
 class PageCollectionViewController: UICollectionViewController {
@@ -26,11 +27,22 @@ class PageCollectionViewController: UICollectionViewController {
         
 //        self.automaticallyAdjustsScrollViewInsets = false
         
-        let popularShot = ShotViewController()
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.greenColor()
+//        let popularShot = ShotCollectionViewController()
+//        vc.view.addSubview(popularShot.collectionView!)
+//        self.pages.viewControllers.append(vc)
+//        
+//        let vc2 = UIViewController()
+//        vc2.view.backgroundColor = UIColor.grayColor()
+//        self.pages.viewControllers.append(vc2)
+        
+        let popularShot = ShotCollectionViewController()
         self.pages.viewControllers.append(popularShot)
-//
-//        let popularShot2 = ShotViewController()
-//        self.pages.viewControllers.append(popularShot2)
+
+        let popularShot2 = ShotCollectionViewController()
+        popularShot2.view.backgroundColor = UIColor.greenColor()
+        self.pages.viewControllers.append(popularShot2)
     }
     
     // MARK: - UICollectionViewDelegate

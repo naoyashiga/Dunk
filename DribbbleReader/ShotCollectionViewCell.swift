@@ -14,6 +14,6 @@ class ShotCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.setTranslatesAutoresizingMaskIntoConstraints(false)
     }
-
 }
