@@ -26,10 +26,10 @@ class DribbleObjectHandler {
                 image = UIImage(data: data!)!
             }
             
-            imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
+//            imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
             
             dispatch_async(dispatch_get_main_queue()){
-//                imageView.image = image
+                imageView.image = image
             }
         }
     }

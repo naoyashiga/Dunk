@@ -9,7 +9,7 @@
 import Foundation
 
 class Shot: DribbbleBase {
-    var imageUrl = ""
+    var imageUrl:String!
     var imageData: NSData?
     
     override init(data: NSDictionary) {

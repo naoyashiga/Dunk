@@ -28,6 +28,7 @@ class BaseViewController: UIViewController {
         var popularShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         popularShot.title = "Popular"
         popularShot.API_URL = Config.POPULAR_URL
+        popularShot.parentNavigationController = self.navigationController
         controllerArray.append(popularShot)
         
         var recentShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)

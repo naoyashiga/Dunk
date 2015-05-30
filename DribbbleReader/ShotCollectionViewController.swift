@@ -10,7 +10,7 @@ import UIKit
 
 let reuseIdentifier_Shot = "ShotCollectionViewCell"
 
-class ShotCollectionViewController: UICollectionViewController {
+class ShotCollectionViewController: UICollectionViewController{
     private var shots:[Shot] = [Shot]() {
         didSet{
             self.collectionView?.reloadData()
@@ -21,6 +21,7 @@ class ShotCollectionViewController: UICollectionViewController {
     private var cellHeight:CGFloat = 0.0
     
     var API_URL = Config.SHOT_URL
+    var parentNavigationController : UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,7 @@ class ShotCollectionViewController: UICollectionViewController {
         
         let shot = shots[indexPath.row]
         
+        cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
 //        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
 //        cell.imageView.frame = cell.imageView.bounds
 //        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -86,7 +88,6 @@ class ShotCollectionViewController: UICollectionViewController {
 //                
 //        })
         
-        cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
         //        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell.imageView)
         
         return cell
@@ -103,5 +104,33 @@ class ShotCollectionViewController: UICollectionViewController {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0.0
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
+        let shot = shots[indexPath.row]
+        var imageModalViewController = ImageModalViewController(nibName: "ImageModalViewController", bundle: nil)
+        imageModalViewController.modalPresentationStyle = .FullScreen
+        imageModalViewController.modalTransitionStyle = .CrossDissolve
+        
+        
+        let downloadQueue = dispatch_queue_create("com.naoyashiga.processdownload", nil)
+        
+        dispatch_async(downloadQueue){
+            var data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
+            
+            var image: UIImage?
+            var sdImageView: UIImageView?
+            
+            if data != nil {
+                shot.imageData = data
+                image = UIImage(data: data!)!
+            }
+            
+            dispatch_async(dispatch_get_main_queue()){
+                imageModalViewController.imageView.image = image
+            }
+        }
+        self.parentNavigationController?.presentViewController(imageModalViewController, animated: true, completion: nil)
     }
 }

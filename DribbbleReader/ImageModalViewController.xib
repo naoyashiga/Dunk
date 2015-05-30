@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageModalViewController" customModule="DribbbleReader" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="ymp-59-PCl" id="e4h-KP-mpf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-59-PCl">
+                    <rect key="frame" x="0.0" y="100" width="600" height="400"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.89595562849999999" green="0.80187869506228593" blue="0.79930752533674365" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ymp-59-PCl" secondAttribute="centerX" id="L0c-Ed-v6r"/>
+                <constraint firstAttribute="centerY" secondItem="ymp-59-PCl" secondAttribute="centerY" id="YDm-x4-x6b"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="061-PU-GQh" appends="YES" id="0ei-Cn-VK6"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="061-PU-GQh">
+            <connections>
+                <action selector="backgroundTapped:" destination="-1" id="Awe-3n-ezt"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="sample" width="200" height="150"/>
+    </resources>
+</document>
