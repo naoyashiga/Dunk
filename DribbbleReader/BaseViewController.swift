@@ -25,13 +25,20 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = false
         
-        var shot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
-        shot.title = "Popular"
-        controllerArray.append(shot)
+        var popularShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        popularShot.title = "Popular"
+        popularShot.API_URL = Config.POPULAR_URL
+//        controllerArray.append(popularShot)
         
-        var shot2 = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
-        shot2.title = "test2"
-        controllerArray.append(shot2)
+        var recentShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        recentShot.title = "Recent"
+        recentShot.API_URL = Config.RECENT_URL
+//        controllerArray.append(recentShot)
+        
+        var gifShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        gifShot.title = "Gif"
+        gifShot.API_URL = Config.GIF_URL
+        controllerArray.append(gifShot)
         
         var parameters: [String: AnyObject] = [
             "scrollMenuBackgroundColor": UIColor.scrollMenuBackgroundColor(),

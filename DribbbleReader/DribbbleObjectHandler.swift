@@ -36,7 +36,7 @@ class DribbleObjectHandler {
     
     class func getShots(url: String, callback:(([Shot]) -> Void)){
         var shots = [Shot]()
-        var url = url + "?access_token=" + Config.ACCESS_TOKEN
+        var url = url + "&access_token=" + Config.ACCESS_TOKEN
         
         HttpService.getJSON(url){ (jsonData) -> Void in
             

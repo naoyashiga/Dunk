@@ -18,6 +18,7 @@ class ShotCollectionViewController: UICollectionViewController {
             self.collectionView?.reloadData()
         }
     }
+    var API_URL = Config.SHOT_URL
     
     var cellWidth:CGFloat?
     var cellHeight:CGFloat?
@@ -30,7 +31,7 @@ class ShotCollectionViewController: UICollectionViewController {
         
         self.collectionView?.registerNib(UINib(nibName: "ShotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier_Shot)
         
-        DribbleObjectHandler.getShots(Config.SHOT_URL, callback: {(shots) -> Void in
+        DribbleObjectHandler.getShots(API_URL, callback: {(shots) -> Void in
             self.shots = shots
         })
         
