@@ -116,9 +116,6 @@
 		9A1863781B08BD1F0061BBF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
-				9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */,
-				9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */,
 				9A0EBC361B0F59EC006FBD58 /* ShotCollectionViewController.swift */,
 				9A0EBC371B0F59EC006FBD58 /* ShotCollectionViewController.xib */,
 				9A0EBC321B0F4C80006FBD58 /* BaseViewController.swift */,
@@ -134,6 +131,17 @@
 				9ABB83351B1731DB00D699EB /* TimingFunction.swift */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		9ABB83371B199AA100D699EB /* botsu */ = {
+			isa = PBXGroup;
+			children = (
+				9AF6AB661B0824C000FD07E6 /* ViewController.swift */,
+				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
+				9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */,
+				9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */,
+			);
+			name = botsu;
 			sourceTree = "<group>";
 		};
 		9AF6AB561B0824C000FD07E6 = {
@@ -160,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */,
-				9AF6AB661B0824C000FD07E6 /* ViewController.swift */,
 				9AF6AB981B08927800FD07E6 /* View */,
 				9AF6AB881B08818800FD07E6 /* Data and Model */,
 				9A1863781B08BD1F0061BBF4 /* Controller */,
@@ -178,6 +185,7 @@
 		9AF6AB621B0824C000FD07E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9ABB83371B199AA100D699EB /* botsu */,
 				9AF6AB631B0824C000FD07E6 /* Info.plist */,
 			);
 			name = "Supporting Files";

@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 class HttpService {
-    
-    
     class func getJSON(url: String, callback:((NSArray) -> Void)) {
         var nsURL = NSURL(string: url)!
         var session = NSURLSession.sharedSession()

@@ -8,33 +8,31 @@
 
 import UIKit
 
-import UIKit
-
 let reuseIdentifier_Shot = "ShotCollectionViewCell"
 
 class ShotCollectionViewController: UICollectionViewController {
-    var shots:[Shot] = [Shot]() {
+    private var shots:[Shot] = [Shot]() {
         didSet{
             self.collectionView?.reloadData()
         }
     }
-    var API_URL = Config.SHOT_URL
     
-    var cellWidth:CGFloat?
-    var cellHeight:CGFloat?
+    private var cellWidth:CGFloat = 0.0
+    private var cellHeight:CGFloat = 0.0
+    
+    var API_URL = Config.SHOT_URL
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cellWidth = self.view.bounds.width
-        self.cellHeight = self.view.bounds.height / 2.5
+        cellWidth = self.view.bounds.width
+        cellHeight = self.view.bounds.height / 2.5
         
         self.collectionView?.registerNib(UINib(nibName: "ShotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier_Shot)
         
         DribbleObjectHandler.getShots(API_URL, callback: {(shots) -> Void in
             self.shots = shots
         })
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +46,6 @@ class ShotCollectionViewController: UICollectionViewController {
         return 1
     }
     
-    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shots.count
     }
@@ -58,7 +55,7 @@ class ShotCollectionViewController: UICollectionViewController {
         
         let shot = shots[indexPath.row]
         
-        cell.imageView.bounds = CGRectMake(0, 0, self.cellWidth!, self.cellHeight!)
+        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
         cell.imageView.frame = cell.imageView.bounds
         cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         cell.contentView.backgroundColor = UIColor.yellowColor()
@@ -71,7 +68,7 @@ class ShotCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: self.cellWidth!, height: self.cellHeight!)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -81,34 +78,4 @@ class ShotCollectionViewController: UICollectionViewController {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0.0
     }
-    
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return true
-    }
-    */
-    
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return true
-    }
-    */
-    
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return false
-    }
-    
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-    return false
-    }
-    
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
-    */
-    
 }
