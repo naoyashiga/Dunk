@@ -55,10 +55,36 @@ class ShotCollectionViewController: UICollectionViewController {
         
         let shot = shots[indexPath.row]
         
-        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
-        cell.imageView.frame = cell.imageView.bounds
-        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        cell.contentView.backgroundColor = UIColor.yellowColor()
+//        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
+//        cell.imageView.frame = cell.imageView.bounds
+//        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        
+//        cell.animatedImageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
+//        cell.animatedImageView.frame = cell.animatedImageView.bounds
+//        cell.animatedImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        
+//        cell.contentView.backgroundColor = UIColor.yellowColor()
+        
+//        let imageLoadQueue = dispatch_queue_create("imageLoadQueue", nil)
+//        
+//        SDWebImageDownloader.sharedDownloader().downloadImageWithURL(
+//            NSURL(string: shot.imageUrl),
+//            options: SDWebImageDownloaderOptions.UseNSURLCache,
+//            progress: nil,
+//            completed: { (image: UIImage!, data: NSData!, error: NSError!, finished: Bool) -> Void in
+//                if finished {
+//                    dispatch_async(imageLoadQueue, {
+//                        let animatedImage = FLAnimatedImage(animatedGIFData: data)
+//                        if let animatedImage = animatedImage {
+//                            dispatch_async(dispatch_get_main_queue(), {
+//                                cell.animatedImageView.animatedImage = FLAnimatedImage(GIFData: data)
+//                            })
+//                        }
+//                    })
+//                }
+//                
+//        })
         
         cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
         //        DribbleObjectHandler.asyncLoadShotImage(shot, imageView: cell.imageView)

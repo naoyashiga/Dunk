@@ -28,7 +28,7 @@ class BaseViewController: UIViewController {
         var popularShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         popularShot.title = "Popular"
         popularShot.API_URL = Config.POPULAR_URL
-//        controllerArray.append(popularShot)
+        controllerArray.append(popularShot)
         
         var recentShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         recentShot.title = "Recent"
@@ -38,7 +38,7 @@ class BaseViewController: UIViewController {
         var gifShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         gifShot.title = "Gif"
         gifShot.API_URL = Config.GIF_URL
-        controllerArray.append(gifShot)
+//        controllerArray.append(gifShot)
         
         var parameters: [String: AnyObject] = [
             "scrollMenuBackgroundColor": UIColor.scrollMenuBackgroundColor(),

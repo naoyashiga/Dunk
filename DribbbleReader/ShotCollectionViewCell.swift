@@ -11,6 +11,7 @@ import UIKit
 class ShotCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
 
+//    @IBOutlet weak var animatedImageView: FLAnimatedImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
