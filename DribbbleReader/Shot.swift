@@ -10,6 +10,7 @@ import Foundation
 
 class Shot: DribbbleBase {
     var imageUrl:String!
+    var htmlUrl:String!
     var imageData: NSData?
     
     override init(data: NSDictionary) {
@@ -17,5 +18,6 @@ class Shot: DribbbleBase {
         
         let images = data["images"] as! NSDictionary
         self.imageUrl = Utils.getStringFromJSON(images, key: "normal")
+        self.htmlUrl = data["html_url"] as! String
     }
 }
