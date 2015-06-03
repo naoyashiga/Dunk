@@ -21,7 +21,7 @@ class ShotCollectionViewController: UICollectionViewController{
     private var cellHeight:CGFloat = 0.0
     
     var API_URL = Config.SHOT_URL
-    var parentNavigationController : UINavigationController?
+    var parentNavigationController = UINavigationController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,28 +109,32 @@ class ShotCollectionViewController: UICollectionViewController{
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
         let shot = shots[indexPath.row]
-        var imageModalViewController = ImageModalViewController(nibName: "ImageModalViewController", bundle: nil)
-        imageModalViewController.modalPresentationStyle = .FullScreen
-        imageModalViewController.modalTransitionStyle = .CrossDissolve
+//        var vc = ImageModalViewController(nibName: "ImageModalViewController", bundle: nil)
+        var vc = DetailViewController(nibName: "DetailViewController", bundle: nil)
+//        vc.modalPresentationStyle = .FullScreen
+//        vc.modalTransitionStyle = .CrossDissolve
+//        vc.parentNavigationController = parentNavigationController
+//        vc.pageUrl = shot.htmlUrl
         
+//        let downloadQueue = dispatch_queue_create("com.naoyashiga.processdownload", nil)
+//        
+//        dispatch_async(downloadQueue){
+//            var data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
+//            
+//            var image: UIImage?
+//            var sdImageView: UIImageView?
+//            
+//            if data != nil {
+//                shot.imageData = data
+//                image = UIImage(data: data!)!
+//            }
+//            
+//            dispatch_async(dispatch_get_main_queue()){
+//                vc.imageView.image = image
+//            }
+//        }
         
-        let downloadQueue = dispatch_queue_create("com.naoyashiga.processdownload", nil)
-        
-        dispatch_async(downloadQueue){
-            var data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
-            
-            var image: UIImage?
-            var sdImageView: UIImageView?
-            
-            if data != nil {
-                shot.imageData = data
-                image = UIImage(data: data!)!
-            }
-            
-            dispatch_async(dispatch_get_main_queue()){
-                imageModalViewController.imageView.image = image
-            }
-        }
-        self.parentNavigationController?.presentViewController(imageModalViewController, animated: true, completion: nil)
+        self.parentNavigationController.presentViewController(vc, animated: true, completion: nil)
+//        self.parentNavigationController.pushViewController(vc, animated: true)
     }
 }
