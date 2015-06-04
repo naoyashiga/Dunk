@@ -10,6 +10,10 @@ import UIKit
 
 class ShotCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var shotName: UILabel!
+    @IBOutlet weak var designerName: UILabel!
+    @IBOutlet weak var designerIcon: UIImageView!
+    @IBOutlet weak var viewLabel: UILabel!
 
 //    @IBOutlet weak var animatedImageView: FLAnimatedImageView!
     override func awakeFromNib() {

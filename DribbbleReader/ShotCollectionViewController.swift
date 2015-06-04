@@ -20,11 +20,16 @@ class ShotCollectionViewController: UICollectionViewController{
     private var cellWidth:CGFloat = 0.0
     private var cellHeight:CGFloat = 0.0
     
+    private let cellVerticalMargin:CGFloat = 20.0
+    private let cellHorizontalMargin:CGFloat = 20.0
+    
     var API_URL = Config.SHOT_URL
     var parentNavigationController = UINavigationController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.hexStr("ff0000", alpha: 1.0)
         
         cellWidth = self.view.bounds.width
         cellHeight = self.view.bounds.height / 2.5
@@ -57,6 +62,13 @@ class ShotCollectionViewController: UICollectionViewController{
         let shot = shots[indexPath.row]
         
         cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
+        cell.designerIcon.sd_setImageWithURL(NSURL(string: shot.avatarUrl)!)
+        
+        cell.shotName.text = shot.shotName
+        cell.designerName.text = shot.designerName
+        cell.viewLabel.text = String(shot.shotCount)
+        
+        
 //        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
 //        cell.imageView.frame = cell.imageView.bounds
 //        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -95,15 +107,19 @@ class ShotCollectionViewController: UICollectionViewController{
     
     // MARK: UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: cellWidth, height: cellHeight)
+        return CGSize(width: cellWidth - cellHorizontalMargin, height: cellHeight)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0.0
+        return cellVerticalMargin
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0.0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -134,7 +150,7 @@ class ShotCollectionViewController: UICollectionViewController{
 //            }
 //        }
         
-        self.parentNavigationController.presentViewController(vc, animated: true, completion: nil)
+//        self.parentNavigationController.presentViewController(vc, animated: true, completion: nil)
 //        self.parentNavigationController.pushViewController(vc, animated: true)
     }
 }

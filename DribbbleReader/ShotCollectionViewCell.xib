@@ -13,17 +13,78 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-n8-cpM" userLabel="image">
-                        <rect key="frame" x="100" y="75" width="200" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBb-6M-dg0">
+                        <rect key="frame" x="0.0" y="250" width="400" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="bRn-Mv-70y">
+                                <rect key="frame" x="8" y="5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EzT-m3-jQF"/>
+                                    <constraint firstAttribute="width" constant="40" id="RUU-h8-cG7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nW-HN-GtH">
+                                <rect key="frame" x="71" y="8" width="43" height="18"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGM-7u-gtM">
+                                <rect key="frame" x="71" y="28" width="63" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-mG-h3t">
+                                <rect key="frame" x="351" y="31" width="41" height="18"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YC-zF-E6K">
+                                <rect key="frame" x="296" y="25" width="49" height="24"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12546794243710332" green="0.15686503668233878" blue="0.16971685082872923" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="wGM-7u-gtM" secondAttribute="centerY" constant="-14" id="1BH-7x-gD6"/>
+                            <constraint firstAttribute="trailing" secondItem="4YC-zF-E6K" secondAttribute="trailing" constant="55" id="DVH-ob-RBn"/>
+                            <constraint firstItem="9nW-HN-GtH" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="23" id="Du3-vc-dZx"/>
+                            <constraint firstAttribute="centerY" secondItem="bRn-Mv-70y" secondAttribute="centerY" id="Ndj-4J-MMv"/>
+                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="wGM-7u-gtM" secondAttribute="bottom" id="Nrv-Se-tkN"/>
+                            <constraint firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" constant="1" id="PD1-Zh-NeF"/>
+                            <constraint firstAttribute="height" constant="50" id="QvC-E5-0ar"/>
+                            <constraint firstAttribute="trailing" secondItem="5fu-mG-h3t" secondAttribute="trailing" constant="8" id="VVL-vC-iVd"/>
+                            <constraint firstItem="wGM-7u-gtM" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="23" id="Weq-IM-fZs"/>
+                            <constraint firstAttribute="centerY" secondItem="9nW-HN-GtH" secondAttribute="centerY" constant="8" id="dQf-Z9-fiI"/>
+                            <constraint firstItem="bRn-Mv-70y" firstAttribute="leading" secondItem="gBb-6M-dg0" secondAttribute="leading" constant="8" id="hfw-ZK-3hg"/>
+                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" id="pkj-dy-18E"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="0.39479022790055252" green="0.39479022790055252" blue="0.39479022790055252" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="3JT-n8-cpM" secondAttribute="centerX" id="djw-KL-6eR"/>
-                <constraint firstAttribute="centerY" secondItem="3JT-n8-cpM" secondAttribute="centerY" id="qfz-aS-8bI"/>
+                <constraint firstItem="3JT-n8-cpM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5Sm-ld-jJF"/>
+                <constraint firstAttribute="trailing" secondItem="3JT-n8-cpM" secondAttribute="trailing" id="UZr-oK-vGo"/>
+                <constraint firstItem="gBb-6M-dg0" firstAttribute="top" secondItem="3JT-n8-cpM" secondAttribute="bottom" id="VFN-cL-ntZ"/>
+                <constraint firstAttribute="bottom" secondItem="gBb-6M-dg0" secondAttribute="bottom" id="ef9-Zr-smz"/>
+                <constraint firstItem="gBb-6M-dg0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qix-lw-yo4"/>
+                <constraint firstItem="3JT-n8-cpM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uFt-ll-gEX"/>
+                <constraint firstAttribute="trailing" secondItem="gBb-6M-dg0" secondAttribute="trailing" id="wVM-X8-zgz"/>
             </constraints>
             <connections>
+                <outlet property="designerIcon" destination="bRn-Mv-70y" id="lYA-EM-ARs"/>
+                <outlet property="designerName" destination="wGM-7u-gtM" id="T4G-sm-an0"/>
                 <outlet property="imageView" destination="3JT-n8-cpM" id="VQQ-Li-TP3"/>
+                <outlet property="shotName" destination="9nW-HN-GtH" id="CdH-ic-8bh"/>
+                <outlet property="viewLabel" destination="4YC-zF-E6K" id="4f4-Ka-jpH"/>
             </connections>
         </collectionViewCell>
     </objects>
