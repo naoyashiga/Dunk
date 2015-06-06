@@ -29,7 +29,7 @@ class ShotCollectionViewController: UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.hexStr("ff0000", alpha: 1.0)
+        self.collectionView!.backgroundColor = UIColor.hexStr("f5f5f5", alpha: 1.0)
         
         cellWidth = self.view.bounds.width
         cellHeight = self.view.bounds.height / 2.5
@@ -62,11 +62,19 @@ class ShotCollectionViewController: UICollectionViewController{
         let shot = shots[indexPath.row]
         
         cell.imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
+//        cell.imageView.layer.shadowColor = UIColor.blackColor().CGColor
+//        cell.imageView.layer.shadowOffset = CGSize(width: 0, height: 10)
+//        cell.imageView.layer.shadowOpacity = 0.8
+//        cell.imageView.layer.shadowRadius = 5
+        
         cell.designerIcon.sd_setImageWithURL(NSURL(string: shot.avatarUrl)!)
+        cell.designerIcon.layer.cornerRadius = cell.designerIcon.bounds.width / 2
+        cell.designerIcon.layer.masksToBounds = true
         
         cell.shotName.text = shot.shotName
         cell.designerName.text = shot.designerName
         cell.viewLabel.text = String(shot.shotCount)
+        
         
         
 //        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)

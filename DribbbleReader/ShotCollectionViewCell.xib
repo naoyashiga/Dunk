@@ -25,45 +25,57 @@
                                     <constraint firstAttribute="width" constant="40" id="RUU-h8-cG7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nW-HN-GtH">
-                                <rect key="frame" x="71" y="8" width="43" height="18"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nW-HN-GtH">
+                                <rect key="frame" x="65" y="6" width="43" height="18"/>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="13"/>
+                                <color key="textColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGM-7u-gtM">
-                                <rect key="frame" x="71" y="28" width="63" height="21"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Designer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGM-7u-gtM">
+                                <rect key="frame" x="65" y="26" width="63" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <color key="textColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-mG-h3t">
-                                <rect key="frame" x="351" y="31" width="41" height="18"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-mG-h3t">
+                                <rect key="frame" x="351" y="28" width="41" height="18"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <color key="textColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YC-zF-E6K">
-                                <rect key="frame" x="296" y="25" width="49" height="24"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YC-zF-E6K">
+                                <rect key="frame" x="303" y="25" width="49" height="24"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.12546794243710332" green="0.15686503668233878" blue="0.16971685082872923" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="wGM-7u-gtM" secondAttribute="centerY" constant="-14" id="1BH-7x-gD6"/>
-                            <constraint firstAttribute="trailing" secondItem="4YC-zF-E6K" secondAttribute="trailing" constant="55" id="DVH-ob-RBn"/>
-                            <constraint firstItem="9nW-HN-GtH" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="23" id="Du3-vc-dZx"/>
+                            <constraint firstAttribute="centerY" secondItem="wGM-7u-gtM" secondAttribute="centerY" constant="-11.5" id="1BH-7x-gD6"/>
+                            <constraint firstAttribute="trailing" secondItem="4YC-zF-E6K" secondAttribute="trailing" constant="48" id="DVH-ob-RBn"/>
+                            <constraint firstItem="9nW-HN-GtH" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="17" id="Du3-vc-dZx"/>
                             <constraint firstAttribute="centerY" secondItem="bRn-Mv-70y" secondAttribute="centerY" id="Ndj-4J-MMv"/>
-                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="wGM-7u-gtM" secondAttribute="bottom" id="Nrv-Se-tkN"/>
-                            <constraint firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" constant="1" id="PD1-Zh-NeF"/>
+                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="wGM-7u-gtM" secondAttribute="bottom" constant="3" id="Nrv-Se-tkN"/>
+                            <constraint firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" constant="4" id="PD1-Zh-NeF"/>
                             <constraint firstAttribute="height" constant="50" id="QvC-E5-0ar"/>
                             <constraint firstAttribute="trailing" secondItem="5fu-mG-h3t" secondAttribute="trailing" constant="8" id="VVL-vC-iVd"/>
-                            <constraint firstItem="wGM-7u-gtM" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="23" id="Weq-IM-fZs"/>
-                            <constraint firstAttribute="centerY" secondItem="9nW-HN-GtH" secondAttribute="centerY" constant="8" id="dQf-Z9-fiI"/>
+                            <constraint firstItem="wGM-7u-gtM" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="17" id="Weq-IM-fZs"/>
+                            <constraint firstAttribute="centerY" secondItem="9nW-HN-GtH" secondAttribute="centerY" constant="10" id="dQf-Z9-fiI"/>
                             <constraint firstItem="bRn-Mv-70y" firstAttribute="leading" secondItem="gBb-6M-dg0" secondAttribute="leading" constant="8" id="hfw-ZK-3hg"/>
-                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" id="pkj-dy-18E"/>
+                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" constant="3" id="pkj-dy-18E"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nrv-Se-tkN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view alpha="0.050000000000000003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6d-Oe-bNk" userLabel="Segment View">
+                        <rect key="frame" x="0.0" y="250" width="400" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8SU-cS-QFK"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -74,7 +86,10 @@
                 <constraint firstItem="3JT-n8-cpM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5Sm-ld-jJF"/>
                 <constraint firstAttribute="trailing" secondItem="3JT-n8-cpM" secondAttribute="trailing" id="UZr-oK-vGo"/>
                 <constraint firstItem="gBb-6M-dg0" firstAttribute="top" secondItem="3JT-n8-cpM" secondAttribute="bottom" id="VFN-cL-ntZ"/>
+                <constraint firstItem="s6d-Oe-bNk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZgV-sk-H36"/>
+                <constraint firstAttribute="trailing" secondItem="s6d-Oe-bNk" secondAttribute="trailing" id="dbv-AN-cnN"/>
                 <constraint firstAttribute="bottom" secondItem="gBb-6M-dg0" secondAttribute="bottom" id="ef9-Zr-smz"/>
+                <constraint firstItem="gBb-6M-dg0" firstAttribute="top" secondItem="s6d-Oe-bNk" secondAttribute="bottom" constant="-1" id="fky-6h-Ggm"/>
                 <constraint firstItem="gBb-6M-dg0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qix-lw-yo4"/>
                 <constraint firstItem="3JT-n8-cpM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uFt-ll-gEX"/>
                 <constraint firstAttribute="trailing" secondItem="gBb-6M-dg0" secondAttribute="trailing" id="wVM-X8-zgz"/>
@@ -85,6 +100,7 @@
                 <outlet property="imageView" destination="3JT-n8-cpM" id="VQQ-Li-TP3"/>
                 <outlet property="shotName" destination="9nW-HN-GtH" id="CdH-ic-8bh"/>
                 <outlet property="viewLabel" destination="4YC-zF-E6K" id="4f4-Ka-jpH"/>
+                <outlet property="viewUnitLabel" destination="5fu-mG-h3t" id="8CR-TZ-m8V"/>
             </connections>
         </collectionViewCell>
     </objects>

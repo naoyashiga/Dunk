@@ -55,4 +55,8 @@ extension UIColor {
     class func unselectedMenuItemLabelColor() -> UIColor {
         return UIColor.hexStr("3ebdf6", alpha: 1)
     }
+    
+    class func cellLabelColor() -> UIColor {
+        return UIColor.hexStr("546E7A", alpha: 1)
+    }
 }

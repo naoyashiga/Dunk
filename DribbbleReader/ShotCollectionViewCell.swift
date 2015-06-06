@@ -14,11 +14,20 @@ class ShotCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var designerName: UILabel!
     @IBOutlet weak var designerIcon: UIImageView!
     @IBOutlet weak var viewLabel: UILabel!
+    @IBOutlet weak var viewUnitLabel: UILabel!
 
 //    @IBOutlet weak var animatedImageView: FLAnimatedImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        self.layer.cornerRadius = 3
+        self.layer.masksToBounds = true
+        
+        shotName.textColor = UIColor.cellLabelColor()
+        designerName.textColor = UIColor.cellLabelColor()
+        viewLabel.textColor = UIColor.cellLabelColor()
+        viewUnitLabel.textColor = UIColor.cellLabelColor()
     }
 }
