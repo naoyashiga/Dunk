@@ -1,11 +1,3 @@
-//
-//  CAPSPageMenu.swift
-//  DribbbleReader
-//
-//  Created by naoyashiga on 2015/05/22.
-//  Copyright (c) 2015年 naoyashiga. All rights reserved.
-//
-
 //  CAPSPageMenu.swift
 //
 //  Niklas Fahl
@@ -64,6 +56,32 @@ class MenuItemView: UIView {
         }
     }
 }
+
+public enum CAPSPageMenuOption {
+    case SelectionIndicatorHeight(CGFloat)
+    case MenuItemSeparatorWidth(CGFloat)
+    case ScrollMenuBackgroundColor(UIColor)
+    case ViewBackgroundColor(UIColor)
+    case BottomMenuHairlineColor(UIColor)
+    case SelectionIndicatorColor(UIColor)
+    case MenuItemSeparatorColor(UIColor)
+    case MenuMargin(CGFloat)
+    case MenuHeight(CGFloat)
+    case SelectedMenuItemLabelColor(UIColor)
+    case UnselectedMenuItemLabelColor(UIColor)
+    case UseMenuLikeSegmentedControl(Bool)
+    case MenuItemSeparatorRoundEdges(Bool)
+    case MenuItemFont(UIFont)
+    case MenuItemSeparatorPercentageHeight(CGFloat)
+    case MenuItemWidth(CGFloat)
+    case EnableHorizontalBounce(Bool)
+    case AddBottomMenuHairline(Bool)
+    case MenuItemWidthBasedOnTitleTextWidth(Bool)
+    case ScrollAnimationDurationOnMenuItemTap(Int)
+    case CenterMenuItems(Bool)
+    case HideTopMenuBar(Bool)
+}
+
 public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
     
     // MARK: - Properties
@@ -145,53 +163,58 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         controllerArray = viewControllers
         
         self.view.frame = frame
+    }
+    
+    public convenience init(viewControllers: [UIViewController], frame: CGRect, pageMenuOptions: [CAPSPageMenuOption]?) {
+        self.init(viewControllers:viewControllers, frame:frame, options:nil)
         
-        if let options = options {
-            for key in options.keys {
-                if key == "selectionIndicatorHeight" {
-                    selectionIndicatorHeight = options[key] as! CGFloat
-                } else if key == "menuItemSeparatorWidth" {
-                    menuItemSeparatorWidth = options[key] as! CGFloat
-                } else if key == "scrollMenuBackgroundColor" {
-                    scrollMenuBackgroundColor = options[key] as! UIColor
-                } else if key == "viewBackgroundColor" {
-                    viewBackgroundColor = options[key] as! UIColor
-                } else if key == "bottomMenuHairlineColor" {
-                    bottomMenuHairlineColor = options[key] as! UIColor
-                } else if key == "selectionIndicatorColor" {
-                    selectionIndicatorColor = options[key] as! UIColor
-                } else if key == "menuItemSeparatorColor" {
-                    menuItemSeparatorColor = options[key] as! UIColor
-                } else if key == "menuMargin" {
-                    menuMargin = options[key] as! CGFloat
-                } else if key == "menuHeight" {
-                    menuHeight = options[key] as! CGFloat
-                } else if key == "selectedMenuItemLabelColor" {
-                    selectedMenuItemLabelColor = options[key] as! UIColor
-                } else if key == "unselectedMenuItemLabelColor" {
-                    unselectedMenuItemLabelColor = options[key] as! UIColor
-                } else if key == "useMenuLikeSegmentedControl" {
-                    useMenuLikeSegmentedControl = options[key] as! Bool
-                } else if key == "menuItemSeparatorRoundEdges" {
-                    menuItemSeparatorRoundEdges = options[key] as! Bool
-                } else if key == "menuItemFont" {
-                    menuItemFont = options[key] as! UIFont
-                } else if key == "menuItemSeparatorPercentageHeight" {
-                    menuItemSeparatorPercentageHeight = options[key] as! CGFloat
-                } else if key == "menuItemWidth" {
-                    menuItemWidth = options[key] as! CGFloat
-                } else if key == "enableHorizontalBounce" {
-                    enableHorizontalBounce = options[key] as! Bool
-                } else if key == "addBottomMenuHairline" {
-                    addBottomMenuHairline = options[key] as! Bool
-                } else if key == "menuItemWidthBasedOnTitleTextWidth" {
-                    menuItemWidthBasedOnTitleTextWidth = options[key] as! Bool
-                } else if key == "scrollAnimationDurationOnMenuItemTap" {
-                    scrollAnimationDurationOnMenuItemTap = options[key] as! Int
-                } else if key == "centerMenuItems" {
-                    centerMenuItems = options[key] as! Bool
-                } else if key == "hideTopMenuBar" {
-                    hideTopMenuBar = options[key] as! Bool
+        if let options = pageMenuOptions {
+            for option in options {
+                switch (option) {
+                case let .SelectionIndicatorHeight(value):
+                    selectionIndicatorHeight = value
+                case let .MenuItemSeparatorWidth(value):
+                    menuItemSeparatorWidth = value
+                case let .ScrollMenuBackgroundColor(value):
+                    scrollMenuBackgroundColor = value
+                case let .ViewBackgroundColor(value):
+                    viewBackgroundColor = value
+                case let .BottomMenuHairlineColor(value):
+                    bottomMenuHairlineColor = value
+                case let .SelectionIndicatorColor(value):
+                    selectionIndicatorColor = value
+                case let .MenuItemSeparatorColor(value):
+                    menuItemSeparatorColor = value
+                case let .MenuMargin(value):
+                    menuMargin = value
+                case let .MenuHeight(value):
+                    menuHeight = value
+                case let .SelectedMenuItemLabelColor(value):
+                    selectedMenuItemLabelColor = value
+                case let .UnselectedMenuItemLabelColor(value):
+                    unselectedMenuItemLabelColor = value
+                case let .UseMenuLikeSegmentedControl(value):
+                    useMenuLikeSegmentedControl = value
+                case let .MenuItemSeparatorRoundEdges(value):
+                    menuItemSeparatorRoundEdges = value
+                case let .MenuItemFont(value):
+                    menuItemFont = value
+                case let .MenuItemSeparatorPercentageHeight(value):
+                    menuItemSeparatorPercentageHeight = value
+                case let .MenuItemWidth(value):
+                    menuItemWidth = value
+                case let .EnableHorizontalBounce(value):
+                    enableHorizontalBounce = value
+                case let .AddBottomMenuHairline(value):
+                    addBottomMenuHairline = value
+                case let .MenuItemWidthBasedOnTitleTextWidth(value):
+                    menuItemWidthBasedOnTitleTextWidth = value
+                case let .ScrollAnimationDurationOnMenuItemTap(value):
+                    scrollAnimationDurationOnMenuItemTap = value
+                case let .CenterMenuItems(value):
+                    centerMenuItems = value
+                case let .HideTopMenuBar(value):
+                    hideTopMenuBar = value
                 }
             }
             
@@ -419,7 +442,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         if !didLayoutSubviewsAfterRotation {
             if scrollView.isEqual(controllerScrollView) {
                 if scrollView.contentOffset.x >= 0.0 && scrollView.contentOffset.x <= (CGFloat(controllerArray.count - 1) * self.view.frame.width) {
-                    if (currentOrientationIsPortrait && self.interfaceOrientation.isPortrait) || (!currentOrientationIsPortrait && self.interfaceOrientation.isLandscape) {
+                    if (currentOrientationIsPortrait && UIApplication.sharedApplication().statusBarOrientation.isPortrait) || (!currentOrientationIsPortrait && UIApplication.sharedApplication().statusBarOrientation.isLandscape) {
                         // Check if scroll direction changed
                         if !didTapMenuItemToScroll {
                             if didScrollAlready {
@@ -754,7 +777,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         controllerScrollView.contentSize = CGSizeMake(self.view.frame.width * CGFloat(controllerArray.count), self.view.frame.height - menuHeight)
         
         var oldCurrentOrientationIsPortrait : Bool = currentOrientationIsPortrait
-        currentOrientationIsPortrait = self.interfaceOrientation.isPortrait
+        currentOrientationIsPortrait = UIApplication.sharedApplication().statusBarOrientation.isPortrait
         
         if (oldCurrentOrientationIsPortrait && UIDevice.currentDevice().orientation.isLandscape) || (!oldCurrentOrientationIsPortrait && UIDevice.currentDevice().orientation.isPortrait) {
             didLayoutSubviewsAfterRotation = true

@@ -41,25 +41,25 @@ class BaseViewController: UIViewController {
         gifShot.API_URL = Config.GIF_URL
 //        controllerArray.append(gifShot)
         
-        var parameters: [String: AnyObject] = [
-            "scrollMenuBackgroundColor": UIColor.scrollMenuBackgroundColor(),
-            "viewBackgroundColor": UIColor.viewBackgroundColor(),
-            "selectionIndicatorColor": UIColor.selectionIndicatorColor(),
-            "bottomMenuHairlineColor": UIColor.bottomMenuHairlineColor(),
-            "selectedMenuItemLabelColor": UIColor.selectedMenuItemLabelColor(),
-            "unselectedMenuItemLabelColor": UIColor.unselectedMenuItemLabelColor(),
-            "selectionIndicatorHeight": 2.0,
-            "menuItemFont": UIFont(name: "HiraKakuProN-W6", size: 15.0)!,
-            "menuHeight": 34.0,
-            "menuItemWidth": 80.0,
-            "menuMargin": 0.0,
+        var parameters: [CAPSPageMenuOption] = [
+            .ScrollMenuBackgroundColor(UIColor.scrollMenuBackgroundColor()),
+            .ViewBackgroundColor(UIColor.viewBackgroundColor()),
+            .SelectionIndicatorColor(UIColor.selectionIndicatorColor()),
+            .BottomMenuHairlineColor(UIColor.bottomMenuHairlineColor()),
+            .SelectedMenuItemLabelColor(UIColor.selectedMenuItemLabelColor()),
+            .UnselectedMenuItemLabelColor(UIColor.unselectedMenuItemLabelColor()),
+            .SelectionIndicatorHeight(2.0),
+            .MenuItemFont(UIFont(name: "HiraKakuProN-W6", size: 15.0)!),
+            .MenuHeight(34.0),
+            .MenuItemWidth(80.0),
+            .MenuMargin(0.0),
             //            "useMenuLikeSegmentedControl": true,
-            "menuItemSeparatorRoundEdges": true,
+            .MenuItemSeparatorRoundEdges(true),
             //            "enableHorizontalBounce": true,
             //            "scrollAnimationDurationOnMenuItemTap": 300,
-            "centerMenuItems": true]
+            .CenterMenuItems(true)]
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), options: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
 
