@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageModalViewController" customModule="DribbbleReader" customModuleProvider="target">
@@ -17,39 +16,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-59-PCl">
-                    <rect key="frame" x="0.0" y="150" width="600" height="300"/>
+                    <rect key="frame" x="0.0" y="138" width="600" height="324"/>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rv6-Db-yIZ" userLabel="dummy View">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SZ-3t-H0H">
-                            <rect key="frame" x="236" y="509" width="129" height="62"/>
-                            <state key="normal" title="View Original Page">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="viewOriginalPageTapped:" destination="-1" eventType="touchUpInside" id="rLw-Qy-V1A"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="centerX" secondItem="9SZ-3t-H0H" secondAttribute="centerX" id="8dr-Ne-swe"/>
-                        <constraint firstAttribute="bottom" secondItem="9SZ-3t-H0H" secondAttribute="bottom" constant="29" id="wmc-pt-5Qy"/>
-                    </constraints>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SZ-3t-H0H">
+                    <rect key="frame" x="257" y="519" width="87" height="30"/>
+                    <state key="normal" title="Share Image">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="viewOriginalPageTapped:" destination="-1" eventType="touchUpInside" id="rLw-Qy-V1A"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.89595562849999999" green="0.80187869506228593" blue="0.79930752533674365" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="ymp-59-PCl" secondAttribute="trailing" id="0Xr-EO-LQK"/>
-                <constraint firstItem="rv6-Db-yIZ" firstAttribute="width" secondItem="ymp-59-PCl" secondAttribute="width" id="1wP-8R-KZC"/>
-                <constraint firstAttribute="centerY" secondItem="ymp-59-PCl" secondAttribute="centerY" id="47G-rE-oVV"/>
-                <constraint firstItem="rv6-Db-yIZ" firstAttribute="height" secondItem="ymp-59-PCl" secondAttribute="height" multiplier="0.4" constant="480" id="LqA-tX-rxs"/>
-                <constraint firstItem="rv6-Db-yIZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qtz-77-cah"/>
-                <constraint firstAttribute="bottom" secondItem="rv6-Db-yIZ" secondAttribute="bottom" id="WUt-0n-K6N"/>
+                <constraint firstAttribute="bottom" secondItem="9SZ-3t-H0H" secondAttribute="bottom" constant="51" id="Eic-no-mgq"/>
+                <constraint firstItem="9SZ-3t-H0H" firstAttribute="top" secondItem="ymp-59-PCl" secondAttribute="bottom" constant="57" id="OHe-jQ-S6c"/>
+                <constraint firstItem="ymp-59-PCl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pmj-2q-1OC"/>
+                <constraint firstAttribute="centerX" secondItem="9SZ-3t-H0H" secondAttribute="centerX" id="Qwh-Zm-DES"/>
                 <constraint firstAttribute="centerX" secondItem="ymp-59-PCl" secondAttribute="centerX" id="Wbd-E7-hFu"/>
-                <constraint firstItem="ymp-59-PCl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="veJ-ff-SVa"/>
+                <constraint firstAttribute="centerY" secondItem="ymp-59-PCl" secondAttribute="centerY" id="xZr-HJ-rKc"/>
+                <constraint firstAttribute="trailing" secondItem="ymp-59-PCl" secondAttribute="trailing" id="z6Z-jC-I7h"/>
             </constraints>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="061-PU-GQh" appends="YES" id="0ei-Cn-VK6"/>

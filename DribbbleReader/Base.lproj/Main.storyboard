@@ -4,69 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Page Collection View Controller-->
-        <scene sceneID="EXV-VO-Y9p">
-            <objects>
-                <collectionViewController id="S5b-wR-B6V" customClass="PageCollectionViewController" customModule="DribbbleReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="Jvj-vD-wXu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ikD-lk-7TM">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageCollectionViewCell" id="j40-ZR-e5d">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="S5b-wR-B6V" id="lW0-pf-JoY"/>
-                            <outlet property="delegate" destination="S5b-wR-B6V" id="m2V-uO-KoG"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="ljk-uR-69y"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tFH-5v-RNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1348" y="320"/>
-        </scene>
-        <!--Page Scroll View Controller-->
-        <scene sceneID="8XV-vd-raH">
-            <objects>
-                <viewController id="K9l-qL-WKK" customClass="PageScrollViewController" customModule="DribbbleReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QgH-lJ-shy"/>
-                        <viewControllerLayoutGuide type="bottom" id="Slp-Gp-G2q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ePN-QL-zzc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Dns-O4-adR">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="v39-fn-Sb1"/>
-                    <connections>
-                        <outlet property="scrollView" destination="Dns-O4-adR" id="jqx-5J-AU2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l7X-U7-0ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="698" y="1016"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="r2H-ow-v7V">
             <objects>

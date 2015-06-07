@@ -54,7 +54,7 @@ class WebViewController: UIViewController, WKUIDelegate {
         wkWebView.allowsBackForwardNavigationGestures = true
         
         //監視対象の登録
-        wkWebView.addObserver(self, forKeyPath:"estimatedProgress", options:.New, context:nil)
+//        wkWebView.addObserver(self, forKeyPath:"estimatedProgress", options:.New, context:nil)
         
         wkWebView.addObserver(self, forKeyPath:"canGoBack", options: .New, context: nil)
         wkWebView.addObserver(self, forKeyPath:"canGoForward", options: .New, context: nil)
