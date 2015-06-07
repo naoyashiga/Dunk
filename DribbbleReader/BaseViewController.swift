@@ -29,16 +29,19 @@ class BaseViewController: UIViewController {
         popularShot.title = "Popular"
         popularShot.API_URL = Config.POPULAR_URL
         popularShot.parentNavigationController = self.navigationController!
+        popularShot.loadShots()
         controllerArray.append(popularShot)
         
         var recentShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         recentShot.title = "Recent"
         recentShot.API_URL = Config.RECENT_URL
+        recentShot.loadShots()
 //        controllerArray.append(recentShot)
         
         var gifShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         gifShot.title = "Gif"
         gifShot.API_URL = Config.GIF_URL
+        gifShot.loadShots()
 //        controllerArray.append(gifShot)
         
         var parameters: [CAPSPageMenuOption] = [

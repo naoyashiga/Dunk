@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YC-zF-E6K">
-                                <rect key="frame" x="303" y="25" width="49" height="24"/>
+                                <rect key="frame" x="303" y="23" width="49" height="24"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                 <color key="textColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                             <constraint firstItem="wGM-7u-gtM" firstAttribute="leading" secondItem="bRn-Mv-70y" secondAttribute="trailing" constant="17" id="Weq-IM-fZs"/>
                             <constraint firstAttribute="centerY" secondItem="9nW-HN-GtH" secondAttribute="centerY" constant="10" id="dQf-Z9-fiI"/>
                             <constraint firstItem="bRn-Mv-70y" firstAttribute="leading" secondItem="gBb-6M-dg0" secondAttribute="leading" constant="8" id="hfw-ZK-3hg"/>
-                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" constant="3" id="pkj-dy-18E"/>
+                            <constraint firstItem="4YC-zF-E6K" firstAttribute="bottom" secondItem="5fu-mG-h3t" secondAttribute="bottom" constant="1" id="pkj-dy-18E"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

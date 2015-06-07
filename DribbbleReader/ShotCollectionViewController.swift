@@ -26,9 +26,14 @@ class ShotCollectionViewController: UICollectionViewController{
     var API_URL = Config.SHOT_URL
     var parentNavigationController = UINavigationController()
     
+    var shotPages = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    func loadShots(){
         self.collectionView!.backgroundColor = UIColor.hexStr("f5f5f5", alpha: 1.0)
         
         cellWidth = self.view.bounds.width
@@ -39,6 +44,16 @@ class ShotCollectionViewController: UICollectionViewController{
         DribbleObjectHandler.getShots(API_URL, callback: {(shots) -> Void in
             self.shots = shots
         })
+        
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("refreshInvoked:"), forControlEvents: UIControlEvents.ValueChanged)
+        collectionView?.addSubview(refreshControl)
+    }
+    
+    func refreshInvoked(sender:AnyObject) {
+        sender.beginRefreshing()
+        collectionView?.reloadData()
+        sender.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,6 +91,18 @@ class ShotCollectionViewController: UICollectionViewController{
         cell.viewLabel.text = String(shot.shotCount)
         
         
+        if shots.count - 1 == indexPath.row && shotPages < 5 {
+            shotPages++
+            println(shotPages)
+            let url = API_URL + "&page=" + String(shotPages)
+            DribbleObjectHandler.getShots(url, callback: {(shots) -> Void in
+//                self.shots = shots
+                
+                for shot in shots {
+                    self.shots.append(shot)
+                }
+            })
+        }
         
 //        cell.imageView.bounds = CGRectMake(0, 0, cellWidth, cellHeight)
 //        cell.imageView.frame = cell.imageView.bounds
