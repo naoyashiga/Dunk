@@ -32,17 +32,23 @@ class BaseViewController: UIViewController {
         popularShot.loadShots()
         controllerArray.append(popularShot)
         
-        var recentShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
-        recentShot.title = "Recent"
-        recentShot.API_URL = Config.RECENT_URL
-        recentShot.loadShots()
-//        controllerArray.append(recentShot)
-        
         var gifShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
-        gifShot.title = "Gif"
+        gifShot.title = "GIFs"
         gifShot.API_URL = Config.GIF_URL
         gifShot.loadShots()
-//        controllerArray.append(gifShot)
+        controllerArray.append(gifShot)
+        
+        var teamsShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        teamsShot.title = "Teams"
+        teamsShot.API_URL = Config.TEAMS_URL
+        teamsShot.loadShots()
+        controllerArray.append(teamsShot)
+        
+        var reboundsShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        reboundsShot.title = "Rebounds"
+        reboundsShot.API_URL = Config.REBOUNDS_URL
+        reboundsShot.loadShots()
+        controllerArray.append(reboundsShot)
         
         var parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor.scrollMenuBackgroundColor()),
@@ -52,7 +58,7 @@ class BaseViewController: UIViewController {
             .SelectedMenuItemLabelColor(UIColor.selectedMenuItemLabelColor()),
             .UnselectedMenuItemLabelColor(UIColor.unselectedMenuItemLabelColor()),
             .SelectionIndicatorHeight(2.0),
-            .MenuItemFont(UIFont(name: "HiraKakuProN-W6", size: 15.0)!),
+            .MenuItemFont(UIFont(name: "HiraKakuProN-W6", size: 13.0)!),
             .MenuHeight(34.0),
             .MenuItemWidth(80.0),
             .MenuMargin(0.0),
@@ -65,15 +71,11 @@ class BaseViewController: UIViewController {
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

@@ -33,11 +33,11 @@ extension UIColor {
     }
     
     class func scrollMenuBackgroundColor() -> UIColor {
-        return UIColor.hexStr("d4f0fd", alpha: 1)
+        return UIColor.hexStr("ECEFF1", alpha: 1)
     }
     
     class func viewBackgroundColor() -> UIColor {
-        return UIColor.hexStr("186d93", alpha: 1)
+        return UIColor.hexStr("263238", alpha: 1)
     }
     
     class func selectionIndicatorColor() -> UIColor {
@@ -49,11 +49,11 @@ extension UIColor {
     }
     
     class func selectedMenuItemLabelColor() -> UIColor {
-        return UIColor.hexStr("145b7b", alpha: 1)
+        return UIColor.hexStr("37474F", alpha: 1)
     }
     
     class func unselectedMenuItemLabelColor() -> UIColor {
-        return UIColor.hexStr("3ebdf6", alpha: 1)
+        return UIColor.hexStr("607D8B", alpha: 1)
     }
     
     class func cellLabelColor() -> UIColor {
