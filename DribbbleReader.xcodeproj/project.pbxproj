@@ -17,18 +17,13 @@
 		9A5D44FC1B1F1B82004A0639 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A5D44FA1B1F1B82004A0639 /* WebViewController.xib */; };
 		9A5D44FF1B1F3248004A0639 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D44FD1B1F3248004A0639 /* DetailViewController.swift */; };
 		9A5D45001B1F3248004A0639 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A5D44FE1B1F3248004A0639 /* DetailViewController.xib */; };
-		9ABB83361B1731DB00D699EB /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB83351B1731DB00D699EB /* TimingFunction.swift */; };
 		9ABB83431B19B9D300D699EB /* ImageModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB83411B19B9D300D699EB /* ImageModalViewController.swift */; };
 		9ABB83441B19B9D300D699EB /* ImageModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB83421B19B9D300D699EB /* ImageModalViewController.xib */; };
-		9ACEBA541B0CC1AA00F990EC /* controllerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */; };
-		9ACEBA561B0CC2D100F990EC /* PageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */; };
 		9AF6AB651B0824C000FD07E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */; };
-		9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB661B0824C000FD07E6 /* ViewController.swift */; };
 		9AF6AB6A1B0824C000FD07E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB681B0824C000FD07E6 /* Main.storyboard */; };
 		9AF6AB6C1B0824C000FD07E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB6B1B0824C000FD07E6 /* Images.xcassets */; };
 		9AF6AB6F1B0824C000FD07E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB6D1B0824C000FD07E6 /* LaunchScreen.xib */; };
 		9AF6AB7B1B0824C000FD07E6 /* DribbbleReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB7A1B0824C000FD07E6 /* DribbbleReaderTests.swift */; };
-		9AF6AB851B0826D100FD07E6 /* PageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */; };
 		9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB891B0881AE00FD07E6 /* Config.swift */; };
 		9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */; };
 		9AF6AB901B0884C800FD07E6 /* DribbbleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */; };
@@ -61,22 +56,17 @@
 		9A5D44FA1B1F1B82004A0639 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		9A5D44FD1B1F3248004A0639 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9A5D44FE1B1F3248004A0639 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		9ABB83351B1731DB00D699EB /* TimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
 		9ABB83411B19B9D300D699EB /* ImageModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModalViewController.swift; sourceTree = "<group>"; };
 		9ABB83421B19B9D300D699EB /* ImageModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageModalViewController.xib; sourceTree = "<group>"; };
-		9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controllerScrollView.swift; sourceTree = "<group>"; };
-		9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollViewController.swift; sourceTree = "<group>"; };
 		9AF6AB5F1B0824C000FD07E6 /* DribbbleReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF6AB631B0824C000FD07E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF6AB641B0824C000FD07E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9AF6AB661B0824C000FD07E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9AF6AB691B0824C000FD07E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AF6AB6B1B0824C000FD07E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AF6AB6E1B0824C000FD07E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9AF6AB741B0824C000FD07E6 /* DribbbleReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbbleReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF6AB791B0824C000FD07E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF6AB7A1B0824C000FD07E6 /* DribbbleReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleReaderTests.swift; sourceTree = "<group>"; };
-		9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewController.swift; sourceTree = "<group>"; };
 		9AF6AB891B0881AE00FD07E6 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9AF6AB8D1B08849500FD07E6 /* DribbbleObjectHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleObjectHandler.swift; sourceTree = "<group>"; };
 		9AF6AB8F1B0884C800FD07E6 /* DribbbleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleBase.swift; sourceTree = "<group>"; };
@@ -146,20 +136,8 @@
 			children = (
 				9AF6AB891B0881AE00FD07E6 /* Config.swift */,
 				9A18637A1B08C32F0061BBF4 /* Color.swift */,
-				9ABB83351B1731DB00D699EB /* TimingFunction.swift */,
 			);
 			name = Config;
-			sourceTree = "<group>";
-		};
-		9ABB83371B199AA100D699EB /* botsu */ = {
-			isa = PBXGroup;
-			children = (
-				9AF6AB661B0824C000FD07E6 /* ViewController.swift */,
-				9AF6AB841B0826D100FD07E6 /* PageCollectionViewController.swift */,
-				9ACEBA551B0CC2D100F990EC /* PageScrollViewController.swift */,
-				9ACEBA531B0CC1AA00F990EC /* controllerScrollView.swift */,
-			);
-			name = botsu;
 			sourceTree = "<group>";
 		};
 		9AF6AB561B0824C000FD07E6 = {
@@ -203,7 +181,6 @@
 		9AF6AB621B0824C000FD07E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9ABB83371B199AA100D699EB /* botsu */,
 				9AF6AB631B0824C000FD07E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -397,23 +374,18 @@
 			files = (
 				9AF6AB901B0884C800FD07E6 /* DribbbleBase.swift in Sources */,
 				9A0EBC381B0F59EC006FBD58 /* ShotCollectionViewController.swift in Sources */,
-				9ABB83361B1731DB00D699EB /* TimingFunction.swift in Sources */,
 				9A5D44FB1B1F1B82004A0639 /* WebViewController.swift in Sources */,
 				9A0EBC311B0F4C10006FBD58 /* CAPSPageMenu.swift in Sources */,
 				9AF6AB9B1B0892EF00FD07E6 /* ShotCollectionViewCell.swift in Sources */,
 				9AF6AB951B0885FB00FD07E6 /* Utils.swift in Sources */,
 				9A5D44FF1B1F3248004A0639 /* DetailViewController.swift in Sources */,
 				9ABB83431B19B9D300D699EB /* ImageModalViewController.swift in Sources */,
-				9ACEBA561B0CC2D100F990EC /* PageScrollViewController.swift in Sources */,
 				9AF6AB8E1B08849500FD07E6 /* DribbbleObjectHandler.swift in Sources */,
-				9ACEBA541B0CC1AA00F990EC /* controllerScrollView.swift in Sources */,
 				9A18637B1B08C32F0061BBF4 /* Color.swift in Sources */,
 				9AF6AB921B08850700FD07E6 /* Shot.swift in Sources */,
-				9AF6AB671B0824C000FD07E6 /* ViewController.swift in Sources */,
 				9AF6AB8A1B0881AE00FD07E6 /* Config.swift in Sources */,
 				9AF6AB651B0824C000FD07E6 /* AppDelegate.swift in Sources */,
 				9A0EBC331B0F4C80006FBD58 /* BaseViewController.swift in Sources */,
-				9AF6AB851B0826D100FD07E6 /* PageCollectionViewController.swift in Sources */,
 				9AF6AB971B0888BE00FD07E6 /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +445,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoya Sugimoto (S8GGSYBVK5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Naoya Sugimoto (S8GGSYBVK5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -496,7 +468,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "d528d0c5-b71f-4c54-960a-dfbbbb333763";
+				PROVISIONING_PROFILE = "68c2338e-93fc-4e8f-ba77-cec9e4ea24a5";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DribbbleReader/DribbbleReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -520,8 +492,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoya Sugimoto (S8GGSYBVK5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Naoya Sugimoto (S8GGSYBVK5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -536,7 +508,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "d528d0c5-b71f-4c54-960a-dfbbbb333763";
+				PROVISIONING_PROFILE = "68c2338e-93fc-4e8f-ba77-cec9e4ea24a5";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DribbbleReader/DribbbleReader-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
@@ -549,11 +521,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoya Sugimoto (S8GGSYBVK5)";
 				INFOPLIST_FILE = DribbbleReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d528d0c5-b71f-4c54-960a-dfbbbb333763";
+				PROVISIONING_PROFILE = "68c2338e-93fc-4e8f-ba77-cec9e4ea24a5";
 				SWIFT_OBJC_BRIDGING_HEADER = "DribbbleReader/DribbbleReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -565,11 +538,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoya Sugimoto (S8GGSYBVK5)";
 				INFOPLIST_FILE = DribbbleReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d528d0c5-b71f-4c54-960a-dfbbbb333763";
+				PROVISIONING_PROFILE = "68c2338e-93fc-4e8f-ba77-cec9e4ea24a5";
 				SWIFT_OBJC_BRIDGING_HEADER = "DribbbleReader/DribbbleReader-Bridging-Header.h";
 			};
 			name = Release;
