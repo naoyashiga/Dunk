@@ -48,8 +48,8 @@ class WebViewController: UIViewController, WKUIDelegate {
 //        wkWebView = WKWebView(frame: CGRectMake(0, 0, screenWidth, screenHeight))
 //        wkWebView = WKWebView(frame: CGRectMake(0, 0, containerView.bounds.width, containerView.bounds.height))
         wkWebView = WKWebView(frame: containerView.bounds)
-        println(containerView.bounds.width)
-        println(containerView.bounds.height)
+        print(containerView.bounds.width)
+        print(containerView.bounds.height)
         
         wkWebView.allowsBackForwardNavigationGestures = true
         
@@ -86,7 +86,7 @@ class WebViewController: UIViewController, WKUIDelegate {
 //    }
     
     func fadeAnimation(duration:CFTimeInterval,fromValue:CGFloat,toValue:CGFloat,view:UIView?){
-        var fadeAnimation:CABasicAnimation = CABasicAnimation(keyPath: "opacity")
+        let fadeAnimation:CABasicAnimation = CABasicAnimation(keyPath: "opacity")
         fadeAnimation.duration = duration
         fadeAnimation.fromValue = fromValue
         fadeAnimation.toValue = toValue
@@ -112,7 +112,7 @@ class WebViewController: UIViewController, WKUIDelegate {
         wkWebView.removeObserver(self, forKeyPath: "canGoBack")
     }
     
-    override func observeValueForKeyPath(keyPath:String, ofObject object:AnyObject, change:[NSObject:AnyObject], context:UnsafeMutablePointer<Void>) {
+    override func observeValueForKeyPath(keyPath:String?, ofObject object:AnyObject?, change:[String:AnyObject]?, context:UnsafeMutablePointer<Void>) {
         switch keyPath {
         case "estimatedProgress":
             if let progress = change[NSKeyValueChangeNewKey] as? Float {
@@ -125,7 +125,7 @@ class WebViewController: UIViewController, WKUIDelegate {
                 self.navigationItem.title = title as String
             }
         case "canGoForward":
-            println("canGoForward")
+            print("canGoForward")
             
 //            var _menuView = self.view.viewWithTag(10)
 //            var _forwardBtn = _menuView?.viewWithTag(2) as! UIButton
@@ -133,7 +133,7 @@ class WebViewController: UIViewController, WKUIDelegate {
 //            changeBtnStatus(_forwardBtn)
             
         case "canGoBack":
-            println("canGoBack")
+            print("canGoBack")
             if wkWebView.canGoBack as Bool {
 //                if let _menuView = self.view.viewWithTag(10) {
 //                    //menuViewを追加済み

@@ -20,7 +20,7 @@ class ShotCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.translatesAutoresizingMaskIntoConstraints = false
         
         self.layer.cornerRadius = 3
         self.layer.masksToBounds = true

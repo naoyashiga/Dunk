@@ -25,32 +25,32 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = false
         
-        var popularShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        let popularShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         popularShot.title = "Popular"
         popularShot.API_URL = Config.POPULAR_URL
         popularShot.parentNavigationController = self.navigationController!
         popularShot.loadShots()
         controllerArray.append(popularShot)
         
-        var gifShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        let gifShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         gifShot.title = "GIFs"
         gifShot.API_URL = Config.GIF_URL
         gifShot.loadShots()
         controllerArray.append(gifShot)
         
-        var teamsShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        let teamsShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         teamsShot.title = "Teams"
         teamsShot.API_URL = Config.TEAMS_URL
         teamsShot.loadShots()
         controllerArray.append(teamsShot)
         
-        var reboundsShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
+        let reboundsShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         reboundsShot.title = "Rebounds"
         reboundsShot.API_URL = Config.REBOUNDS_URL
         reboundsShot.loadShots()
         controllerArray.append(reboundsShot)
         
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor.scrollMenuBackgroundColor()),
             .ViewBackgroundColor(UIColor.viewBackgroundColor()),
             .SelectionIndicatorColor(UIColor.selectionIndicatorColor()),

@@ -61,8 +61,8 @@ class ImageModalViewController: UIViewController {
     }
     
     func fbBtnAction(){
-        var vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        var shareText:String = shotName + " by " + designerName
+        let vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        let shareText:String = shotName + " by " + designerName
         //テキストを設定
         vc.setInitialText(shareText)
         vc.addImage(imageView.image)
@@ -70,8 +70,8 @@ class ImageModalViewController: UIViewController {
     }
     
     func tweetBtnAction(){
-        var vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        var shareText:String = shotName + " by " + designerName
+        let vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        let shareText:String = shotName + " by " + designerName
         //テキストを設定
         vc.setInitialText(shareText)
         vc.addImage(imageView.image)

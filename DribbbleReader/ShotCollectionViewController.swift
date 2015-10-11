@@ -44,7 +44,7 @@ class ShotCollectionViewController: UICollectionViewController{
             self.shots = shots
         })
         
-        var refreshControl = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: Selector("refreshInvoked:"), forControlEvents: UIControlEvents.ValueChanged)
         collectionView?.addSubview(refreshControl)
     }
@@ -91,7 +91,7 @@ class ShotCollectionViewController: UICollectionViewController{
         
         if shots.count - 1 == indexPath.row && shotPages < 5 {
             shotPages++
-            println(shotPages)
+            print(shotPages)
             let url = API_URL + "&page=" + String(shotPages)
             DribbleObjectHandler.getShots(url, callback: {(shots) -> Void in
 //                self.shots = shots
@@ -158,7 +158,7 @@ class ShotCollectionViewController: UICollectionViewController{
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
         let shot = shots[indexPath.row]
-        var vc = ImageModalViewController(nibName: "ImageModalViewController", bundle: nil)
+        let vc = ImageModalViewController(nibName: "ImageModalViewController", bundle: nil)
 //        var vc = DetailViewController(nibName: "DetailViewController", bundle: nil)
         vc.modalPresentationStyle = .FullScreen
         vc.modalTransitionStyle = .CrossDissolve
@@ -170,7 +170,7 @@ class ShotCollectionViewController: UICollectionViewController{
         let downloadQueue = dispatch_queue_create("com.naoyashiga.processdownload", nil)
         
         dispatch_async(downloadQueue){
-            var data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
+            let data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
             
             var image: UIImage?
             
