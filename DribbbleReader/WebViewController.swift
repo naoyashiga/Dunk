@@ -114,17 +114,17 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     override func observeValueForKeyPath(keyPath:String?, ofObject object:AnyObject?, change:[String:AnyObject]?, context:UnsafeMutablePointer<Void>) {
         switch keyPath {
-        case "estimatedProgress":
-            if let progress = change[NSKeyValueChangeNewKey] as? Float {
+        case "estimatedProgress"?:
+            if let progress = change![NSKeyValueChangeNewKey] as? Float {
                 if progress == 1 {
                     fadeAnimation(0.3, fromValue: 1, toValue: 0, view: progressBar)
                 }
             }
-        case "title":
-            if let title = change[NSKeyValueChangeNewKey] as? NSString {
+        case "title"?:
+            if let title = change![NSKeyValueChangeNewKey] as? NSString {
                 self.navigationItem.title = title as String
             }
-        case "canGoForward":
+        case "canGoForward"?:
             print("canGoForward")
             
 //            var _menuView = self.view.viewWithTag(10)
@@ -132,7 +132,7 @@ class WebViewController: UIViewController, WKUIDelegate {
 //            _forwardBtn.enabled = wkWebView!.canGoForward as Bool
 //            changeBtnStatus(_forwardBtn)
             
-        case "canGoBack":
+        case "canGoBack"?:
             print("canGoBack")
             if wkWebView.canGoBack as Bool {
 //                if let _menuView = self.view.viewWithTag(10) {

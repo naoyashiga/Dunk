@@ -11,16 +11,16 @@ import UIKit
 
 class HttpService {
     class func getJSON(url: String, callback:((NSArray) -> Void)) {
-        var nsURL = NSURL(string: url)!
-        var session = NSURLSession.sharedSession()
-        var task = session.dataTaskWithURL(nsURL, completionHandler: { data, response, error -> Void in
+        let nsURL = NSURL(string: url)!
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(nsURL, completionHandler: { data, response, error -> Void in
             
             if error != nil{
                 print("error")
             }
             
             if data != nil {
-                let jsonData = (try! NSJSONSerialization.JSONObjectWithData( data, options: NSJSONReadingOptions.MutableContainers)) as! NSArray
+                let jsonData = (try! NSJSONSerialization.JSONObjectWithData( data!, options: NSJSONReadingOptions.MutableContainers)) as! NSArray
                 callback(jsonData)
             }
             

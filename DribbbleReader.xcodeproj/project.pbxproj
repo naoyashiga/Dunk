@@ -32,6 +32,7 @@
 		9AF6AB971B0888BE00FD07E6 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB961B0888BE00FD07E6 /* HttpService.swift */; };
 		9AF6AB9B1B0892EF00FD07E6 /* ShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6AB991B0892EF00FD07E6 /* ShotCollectionViewCell.swift */; };
 		9AF6AB9C1B0892EF00FD07E6 /* ShotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6AB9A1B0892EF00FD07E6 /* ShotCollectionViewCell.xib */; };
+		D84485011BFC3F3A0057AD1C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84485001BFC3F3A0057AD1C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		9AF6AB991B0892EF00FD07E6 /* ShotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AF6AB9A1B0892EF00FD07E6 /* ShotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotCollectionViewCell.xib; sourceTree = "<group>"; };
 		CB90B99F8CC5FBFBEDB72B64 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D84485001BFC3F3A0057AD1C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DF01959CF26330370BAEBD35 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 		9AF6AB561B0824C000FD07E6 = {
 			isa = PBXGroup;
 			children = (
+				D84485001BFC3F3A0057AD1C /* Default-568h@2x.png */,
 				9AF6AB611B0824C000FD07E6 /* DribbbleReader */,
 				9AF6AB771B0824C000FD07E6 /* DribbbleReaderTests */,
 				9AF6AB601B0824C000FD07E6 /* Products */,
@@ -244,6 +247,7 @@
 				9AF6AB5C1B0824C000FD07E6 /* Frameworks */,
 				9AF6AB5D1B0824C000FD07E6 /* Resources */,
 				C074DFC022B86C426B08D19C /* Copy Pods Resources */,
+				685CD3D6481F4FF693006031 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,7 +284,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = naoyashiga;
 				TargetAttributes = {
 					9AF6AB5E1B0824C000FD07E6 = {
@@ -318,6 +322,7 @@
 			files = (
 				9A0EBC391B0F59EC006FBD58 /* ShotCollectionViewController.xib in Resources */,
 				9AF6AB9C1B0892EF00FD07E6 /* ShotCollectionViewCell.xib in Resources */,
+				D84485011BFC3F3A0057AD1C /* Default-568h@2x.png in Resources */,
 				9AF6AB6A1B0824C000FD07E6 /* Main.storyboard in Resources */,
 				9A5D45001B1F3248004A0639 /* DetailViewController.xib in Resources */,
 				9A5D44FC1B1F1B82004A0639 /* WebViewController.xib in Resources */,
@@ -350,6 +355,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		685CD3D6481F4FF693006031 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C074DFC022B86C426B08D19C /* Copy Pods Resources */ = {
@@ -452,6 +472,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -527,6 +548,7 @@
 				INFOPLIST_FILE = DribbbleReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.DribbbleReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "68c2338e-93fc-4e8f-ba77-cec9e4ea24a5";
 				SWIFT_OBJC_BRIDGING_HEADER = "DribbbleReader/DribbbleReader-Bridging-Header.h";
@@ -544,6 +566,7 @@
 				INFOPLIST_FILE = DribbbleReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.DribbbleReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "68c2338e-93fc-4e8f-ba77-cec9e4ea24a5";
 				SWIFT_OBJC_BRIDGING_HEADER = "DribbbleReader/DribbbleReader-Bridging-Header.h";
@@ -564,6 +587,7 @@
 				);
 				INFOPLIST_FILE = DribbbleReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.DribbbleReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DribbbleReader.app/DribbbleReader";
@@ -580,6 +604,7 @@
 				);
 				INFOPLIST_FILE = DribbbleReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.DribbbleReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DribbbleReader.app/DribbbleReader";

@@ -271,7 +271,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         
         // Add hairline to menu scroll view
         if addBottomMenuHairline {
-            var menuBottomHairline : UIView = UIView()
+            let menuBottomHairline : UIView = UIView()
             
             menuBottomHairline.translatesAutoresizingMaskIntoConstraints = false
             
