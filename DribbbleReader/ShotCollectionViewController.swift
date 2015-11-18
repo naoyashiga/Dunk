@@ -156,7 +156,7 @@ class ShotCollectionViewController: UICollectionViewController{
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
+        let _ = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier_Shot, forIndexPath: indexPath) as! ShotCollectionViewCell
         let shot = shots[indexPath.row]
         let vc = ImageModalViewController(nibName: "ImageModalViewController", bundle: nil)
 //        var vc = DetailViewController(nibName: "DetailViewController", bundle: nil)

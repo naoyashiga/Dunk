@@ -19,8 +19,8 @@ class DribbleObjectHandler {
             let data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
             
             var image: UIImage?
-            var sdImageView: UIImageView?
-            
+//            var sdImageView: UIImageView?
+          
             if data != nil {
                 shot.imageData = data
                 image = UIImage(data: data!)!
