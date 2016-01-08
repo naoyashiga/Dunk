@@ -24,7 +24,7 @@ class ShotCollectionViewController: UICollectionViewController{
     private let cellHorizontalMargin:CGFloat = 20.0
     
     var API_URL = Config.SHOT_URL
-    var parentNavigationController = UINavigationController()
+
     
     var shotPages = 1
     
@@ -184,7 +184,7 @@ class ShotCollectionViewController: UICollectionViewController{
             }
         }
         
-        self.parentNavigationController.presentViewController(vc, animated: true, completion: nil)
+        parentViewController?.presentViewController(vc, animated: true, completion: nil)
 //        self.parentNavigationController.pushViewController(vc, animated: true)
     }
 }

@@ -71,6 +71,8 @@ class BaseViewController: UIViewController {
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
+        self.addChildViewController(pageMenu!)
+        pageMenu?.didMoveToParentViewController(self)
     }
 
     override func didReceiveMemoryWarning() {
