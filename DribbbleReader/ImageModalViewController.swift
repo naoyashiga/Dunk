@@ -37,44 +37,10 @@ class ImageModalViewController: UIViewController {
     }
     
     func shareAlert(){
-        let actionSheet:UIAlertController = UIAlertController(
-            title:"Share this image",
-            message: self.navigationItem.title,
-            preferredStyle: UIAlertControllerStyle.ActionSheet)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
-        }
+        let image = imageView.image
+        let activityVC = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        self.presentViewController(activityVC, animated: true, completion: nil)
         
-        let twitter = UIAlertAction(title: "Twitter", style: .Default) { (action) -> Void in
-            self.tweetBtnAction()
-        }
-        
-        let fb = UIAlertAction(title: "Facebook", style: .Default) { (action) -> Void in
-            self.fbBtnAction()
-        }
-        
-        actionSheet.addAction(cancelAction)
-        actionSheet.addAction(twitter)
-        actionSheet.addAction(fb)
-        
-        presentViewController(actionSheet, animated: true, completion: nil)
-    }
-    
-    func fbBtnAction(){
-        let vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        let shareText:String = shotName + " by " + designerName
-        //テキストを設定
-        vc.setInitialText(shareText)
-        vc.addImage(imageView.image)
-        self.presentViewController(vc,animated:true,completion:nil)
-    }
-    
-    func tweetBtnAction(){
-        let vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        let shareText:String = shotName + " by " + designerName
-        //テキストを設定
-        vc.setInitialText(shareText)
-        vc.addImage(imageView.image)
-        self.presentViewController(vc,animated:true,completion:nil)
     }
 }
