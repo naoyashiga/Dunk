@@ -90,7 +90,7 @@ class ShotCollectionViewController: UICollectionViewController{
         
         
         if shots.count - 1 == indexPath.row && shotPages < 5 {
-            shotPages++
+            shotPages += 1
             print(shotPages)
             let url = API_URL + "&page=" + String(shotPages)
             DribbleObjectHandler.getShots(url, callback: {(shots) -> Void in
