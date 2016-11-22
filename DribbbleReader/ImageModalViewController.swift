@@ -24,11 +24,11 @@ class ImageModalViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func viewOriginalPageTapped(sender: UIButton) {
+    @IBAction func viewOriginalPageTapped(_ sender: UIButton) {
 //        let vc = WebViewController(nibName: "WebViewController", bundle: nil)
 //        vc.pageUrl = pageUrl
 //        
@@ -40,16 +40,16 @@ class ImageModalViewController: UIViewController {
         let actionSheet:UIAlertController = UIAlertController(
             title:"Share this image",
             message: self.navigationItem.title,
-            preferredStyle: UIAlertControllerStyle.ActionSheet)
+            preferredStyle: UIAlertControllerStyle.actionSheet)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
         }
         
-        let twitter = UIAlertAction(title: "Twitter", style: .Default) { (action) -> Void in
+        let twitter = UIAlertAction(title: "Twitter", style: .default) { (action) -> Void in
             self.tweetBtnAction()
         }
         
-        let fb = UIAlertAction(title: "Facebook", style: .Default) { (action) -> Void in
+        let fb = UIAlertAction(title: "Facebook", style: .default) { (action) -> Void in
             self.fbBtnAction()
         }
         
@@ -57,7 +57,7 @@ class ImageModalViewController: UIViewController {
         actionSheet.addAction(twitter)
         actionSheet.addAction(fb)
         
-        presentViewController(actionSheet, animated: true, completion: nil)
+        present(actionSheet, animated: true, completion: nil)
     }
     
     func fbBtnAction(){
@@ -65,8 +65,8 @@ class ImageModalViewController: UIViewController {
         let shareText:String = shotName + " by " + designerName
         //テキストを設定
         vc.setInitialText(shareText)
-        vc.addImage(imageView.image)
-        self.presentViewController(vc,animated:true,completion:nil)
+        vc.add(imageView.image)
+        self.present(vc,animated:true,completion:nil)
     }
     
     func tweetBtnAction(){
@@ -74,7 +74,7 @@ class ImageModalViewController: UIViewController {
         let shareText:String = shotName + " by " + designerName
         //テキストを設定
         vc.setInitialText(shareText)
-        vc.addImage(imageView.image)
-        self.presentViewController(vc,animated:true,completion:nil)
+        vc.add(imageView.image)
+        self.present(vc,animated:true,completion:nil)
     }
 }

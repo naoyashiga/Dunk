@@ -12,11 +12,11 @@ import UIKit
 
 class DribbleObjectHandler {
     
-    class func asyncLoadShotImage(shot: Shot, imageView: UIImageView){
-        let downloadQueue = dispatch_queue_create("com.naoyashiga.processdownload", nil)
+    class func asyncLoadShotImage(_ shot: Shot, imageView: UIImageView){
+        let downloadQueue = DispatchQueue(label: "com.naoyashiga.processdownload", attributes: [])
         
-        dispatch_async(downloadQueue){
-            let data = NSData(contentsOfURL: NSURL(string: shot.imageUrl)!)
+        downloadQueue.async{
+            let data = try? Data(contentsOf: URL(string: shot.imageUrl)!)
             
             var image: UIImage?
 //            var sdImageView: UIImageView?
@@ -28,13 +28,13 @@ class DribbleObjectHandler {
             
 //            imageView.sd_setImageWithURL(NSURL(string: shot.imageUrl)!)
             
-            dispatch_async(dispatch_get_main_queue()){
+            DispatchQueue.main.async{
                 imageView.image = image
             }
         }
     }
     
-    class func getShots(url: String, callback:(([Shot]) -> Void)){
+    class func getShots(_ url: String, callback:@escaping (([Shot]) -> Void)){
         var shots = [Shot]()
         let url = url + "&access_token=" + Config.ACCESS_TOKEN
         
@@ -44,13 +44,11 @@ class DribbleObjectHandler {
                 let shot = Shot(data: shotData as! NSDictionary)
                 shots.append(shot)
             }
-            
-            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-            dispatch_async(dispatch_get_global_queue(priority, 0), { () -> Void in
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+          
+          DispatchQueue.main.async(){
                     callback(shots)
-                })
-            })
+          }
+          
         }
     }
 }

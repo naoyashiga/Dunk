@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-public class Utils {
+open class Utils {
     
-    public class func getStringFromJSON(data: NSDictionary, key: String) -> String{
+    open class func getStringFromJSON(_ data: NSDictionary, key: String) -> String{
 //        let info: AnyObject? = data[key]
       
         if let info = data[key] as? String {
