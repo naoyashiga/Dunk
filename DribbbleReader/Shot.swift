@@ -11,7 +11,7 @@ import Foundation
 class Shot: DribbbleBase {
     var imageUrl:String!
     var htmlUrl:String!
-    var imageData: NSData?
+    var imageData: Data?
     
     var shotName = ""
     var designerName = ""

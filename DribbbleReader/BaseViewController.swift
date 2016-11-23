@@ -18,12 +18,12 @@ class BaseViewController: UIViewController {
         
         self.navigationItem.title = "Dunk"
         
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.navigationBarTitleTextColor()]
         self.navigationController?.navigationBar.barTintColor = UIColor.navigationBarBackgroundColor()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.isTranslucent = false
         
         let popularShot = ShotCollectionViewController(nibName: "ShotCollectionViewController", bundle: nil)
         popularShot.title = "Popular"
@@ -50,28 +50,28 @@ class BaseViewController: UIViewController {
         controllerArray.append(reboundsShot)
         
         let parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor.scrollMenuBackgroundColor()),
-            .ViewBackgroundColor(UIColor.viewBackgroundColor()),
-            .SelectionIndicatorColor(UIColor.selectionIndicatorColor()),
-            .BottomMenuHairlineColor(UIColor.bottomMenuHairlineColor()),
-            .SelectedMenuItemLabelColor(UIColor.selectedMenuItemLabelColor()),
-            .UnselectedMenuItemLabelColor(UIColor.unselectedMenuItemLabelColor()),
-            .SelectionIndicatorHeight(2.0),
-            .MenuItemFont(UIFont(name: "HiraKakuProN-W6", size: 13.0)!),
-            .MenuHeight(34.0),
-            .MenuItemWidth(80.0),
-            .MenuMargin(0.0),
+            .scrollMenuBackgroundColor(UIColor.scrollMenuBackgroundColor()),
+            .viewBackgroundColor(UIColor.viewBackgroundColor()),
+            .selectionIndicatorColor(UIColor.selectionIndicatorColor()),
+            .bottomMenuHairlineColor(UIColor.bottomMenuHairlineColor()),
+            .selectedMenuItemLabelColor(UIColor.selectedMenuItemLabelColor()),
+            .unselectedMenuItemLabelColor(UIColor.unselectedMenuItemLabelColor()),
+            .selectionIndicatorHeight(2.0),
+            .menuItemFont(UIFont(name: "HiraKakuProN-W6", size: 13.0)!),
+            .menuHeight(34.0),
+            .menuItemWidth(80.0),
+            .menuMargin(0.0),
             //            "useMenuLikeSegmentedControl": true,
-            .MenuItemSeparatorRoundEdges(true),
+            .menuItemSeparatorRoundEdges(true),
             //            "enableHorizontalBounce": true,
             //            "scrollAnimationDurationOnMenuItemTap": 300,
-            .CenterMenuItems(true)]
+            .centerMenuItems(true)]
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
         self.addChildViewController(pageMenu!)
-        pageMenu?.didMoveToParentViewController(self)
+        pageMenu?.didMove(toParentViewController: self)
     }
 
     override func didReceiveMemoryWarning() {

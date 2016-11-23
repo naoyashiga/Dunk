@@ -31,7 +31,7 @@ class WebViewController: UIViewController, WKUIDelegate {
     }
 
     func setElementSize(){
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
         
 //        navigationBarHeight = parentNavigationController?.navigationBar.frame.size.height
         navigationBarHeight = 30
@@ -56,24 +56,24 @@ class WebViewController: UIViewController, WKUIDelegate {
         //監視対象の登録
 //        wkWebView.addObserver(self, forKeyPath:"estimatedProgress", options:.New, context:nil)
         
-        wkWebView.addObserver(self, forKeyPath:"canGoBack", options: .New, context: nil)
-        wkWebView.addObserver(self, forKeyPath:"canGoForward", options: .New, context: nil)
+        wkWebView.addObserver(self, forKeyPath:"canGoBack", options: .new, context: nil)
+        wkWebView.addObserver(self, forKeyPath:"canGoForward", options: .new, context: nil)
         
-        wkWebView.UIDelegate = self
+        wkWebView.uiDelegate = self
         
-        let detailUrl = NSURL(string: pageUrl)
-        let detailUrlReq = NSURLRequest(URL: detailUrl!)
-        wkWebView.loadRequest(detailUrlReq)
+        let detailUrl = URL(string: pageUrl)
+        let detailUrlReq = URLRequest(url: detailUrl!)
+        wkWebView.load(detailUrlReq)
         
 //        self.view.addSubview(wkWebView)
         containerView.addSubview(wkWebView)
     }
     
-    @IBAction func goBackBtnTapped(sender: UIBarButtonItem) {
+    @IBAction func goBackBtnTapped(_ sender: UIBarButtonItem) {
         wkWebView.goBack()
     }
     
-    @IBAction func goForwardBtnTapped(sender: UIBarButtonItem) {
+    @IBAction func goForwardBtnTapped(_ sender: UIBarButtonItem) {
         wkWebView.goForward()
     }
     
@@ -85,25 +85,25 @@ class WebViewController: UIViewController, WKUIDelegate {
 //        }
 //    }
     
-    func fadeAnimation(duration:CFTimeInterval,fromValue:CGFloat,toValue:CGFloat,view:UIView?){
+    func fadeAnimation(_ duration:CFTimeInterval,fromValue:CGFloat,toValue:CGFloat,view:UIView?){
         let fadeAnimation:CABasicAnimation = CABasicAnimation(keyPath: "opacity")
         fadeAnimation.duration = duration
         fadeAnimation.fromValue = fromValue
         fadeAnimation.toValue = toValue
-        fadeAnimation.removedOnCompletion = false
+        fadeAnimation.isRemovedOnCompletion = false
         fadeAnimation.fillMode = kCAFillModeForwards
-        view?.layer.addAnimation(fadeAnimation, forKey: nil)
+        view?.layer.add(fadeAnimation, forKey: nil)
     }
     
-    func webView(webView: WKWebView, createWebViewWithConfiguration configuration: WKWebViewConfiguration, forNavigationAction navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         //別タブを開くリンク対策 再度ページの読み込みをする
         if(navigationAction.targetFrame == nil){
-            webView.loadRequest(navigationAction.request)
+            webView.load(navigationAction.request)
         }
         return nil
     }
     
-    func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
     }
     
     deinit {
@@ -112,16 +112,16 @@ class WebViewController: UIViewController, WKUIDelegate {
         wkWebView.removeObserver(self, forKeyPath: "canGoBack")
     }
     
-    override func observeValueForKeyPath(keyPath:String?, ofObject object:AnyObject?, change:[String:AnyObject]?, context:UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath:String?, of object:Any?, change:[NSKeyValueChangeKey:Any]?, context:UnsafeMutableRawPointer?) {
         switch keyPath {
         case "estimatedProgress"?:
-            if let progress = change![NSKeyValueChangeNewKey] as? Float {
+            if let progress = change![NSKeyValueChangeKey.newKey] as? Float {
                 if progress == 1 {
                     fadeAnimation(0.3, fromValue: 1, toValue: 0, view: progressBar)
                 }
             }
         case "title"?:
-            if let title = change![NSKeyValueChangeNewKey] as? NSString {
+            if let title = change![NSKeyValueChangeKey.newKey] as? NSString {
                 self.navigationItem.title = title as String
             }
         case "canGoForward"?:
