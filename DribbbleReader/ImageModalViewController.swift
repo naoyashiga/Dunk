@@ -80,9 +80,7 @@ class ImageModalViewController: UIViewController {
 //    }
     
     func shareWithActivityControllerVC(_ sender: UIButton) {
-        
         let activityVC = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
-        activityVC.excludedActivityTypes = [UIActivityType.print]
         activityVC.popoverPresentationController?.sourceView = sender
         self.present(activityVC, animated: true, completion: nil)
     }
