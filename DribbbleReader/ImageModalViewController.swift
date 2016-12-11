@@ -29,52 +29,12 @@ class ImageModalViewController: UIViewController {
     }
 
     @IBAction func viewOriginalPageTapped(_ sender: UIButton) {
-//        let vc = WebViewController(nibName: "WebViewController", bundle: nil)
-//        vc.pageUrl = pageUrl
-//        
-//        parentNavigationController.pushViewController(vc, animated: true)
-        shareAlert()
+        shareWithActivityControllerVC(sender)
     }
     
-    func shareAlert(){
-        let actionSheet:UIAlertController = UIAlertController(
-            title:"Share this image",
-            message: self.navigationItem.title,
-            preferredStyle: UIAlertControllerStyle.actionSheet)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-        }
-        
-        let twitter = UIAlertAction(title: "Twitter", style: .default) { (action) -> Void in
-            self.tweetBtnAction()
-        }
-        
-        let fb = UIAlertAction(title: "Facebook", style: .default) { (action) -> Void in
-            self.fbBtnAction()
-        }
-        
-        actionSheet.addAction(cancelAction)
-        actionSheet.addAction(twitter)
-        actionSheet.addAction(fb)
-        
-        present(actionSheet, animated: true, completion: nil)
-    }
-    
-    func fbBtnAction(){
-        let vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        let shareText:String = shotName + " by " + designerName
-        //テキストを設定
-        vc.setInitialText(shareText)
-        vc.add(imageView.image)
-        self.present(vc,animated:true,completion:nil)
-    }
-    
-    func tweetBtnAction(){
-        let vc:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        let shareText:String = shotName + " by " + designerName
-        //テキストを設定
-        vc.setInitialText(shareText)
-        vc.add(imageView.image)
-        self.present(vc,animated:true,completion:nil)
+    func shareWithActivityControllerVC(_ sender: UIButton) {
+        let activityVC = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = sender
+        self.present(activityVC, animated: true, completion: nil)
     }
 }
