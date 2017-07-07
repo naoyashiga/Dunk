@@ -51,6 +51,7 @@ class ShotCollectionViewController: UICollectionViewController{
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(sendToProfile(gesture:)) )
         tapRecognizer.delaysTouchesBegan = true
+        tapRecognizer.cancelsTouchesInView = false
         collectionView?.addGestureRecognizer(tapRecognizer)
     }
     
@@ -195,28 +196,37 @@ class ShotCollectionViewController: UICollectionViewController{
     }
     
     func sendToProfile(gesture: UITapGestureRecognizer) {
+        var didSend = false
         if gesture.state == UIGestureRecognizerState.ended {
             let point:CGPoint = gesture.location(in: collectionView)
             let indexPath = collectionView?.indexPathForItem(at: point)
             
             if indexPath != nil {
                 let cell = collectionView?.cellForItem(at: indexPath!) as! ShotCollectionViewCell
-                let subViewRect = collectionView?.convert(cell.designerIcon.frame, from: cell)
-                let altpoint = collectionView?.convert(point, to: cell.designerIcon)
+                let subViewRect = cell.designerIcon.frame
                 
-                if (subViewRect?.contains(altpoint!))! {
-                    var webVC:UIViewController?
+                //convert the gesture location to the designer icon's coordinate system, to check if the tap occurred within that frame
+                let altPoint = collectionView?.convert(point, to: cell.designerIcon)
+                if (subViewRect.contains(altPoint!)) {
                     
                     if #available(iOS 9.0, *) {
-                        webVC = SFSafariViewController(url: URL(string:cell.designerUrl!)!)
-                        self.present(webVC!, animated: true, completion: nil)
+                        let webVC = SFSafariViewController(url: URL(string:cell.designerUrl!)!)
+                        self.present(webVC, animated: true, completion: nil)
+                        didSend = true
                     } else {
-//                        webVC = WebViewController()
-//                        webVC?.pageUrl = cell.designerUrl!
+                        let webVC = WebViewController()
+                        webVC.pageUrl = cell.designerUrl!
+                        self.present(webVC, animated: true, completion: nil)
+                        didSend = true
                     }
                     
                 }
             }
+        }
+        if !didSend {
+            let point:CGPoint = gesture.location(in: collectionView)
+            let indexPath = collectionView?.indexPathForItem(at: point)
+            collectionView(collectionView!, didSelectItemAt: indexPath!)
         }
     }
 }
