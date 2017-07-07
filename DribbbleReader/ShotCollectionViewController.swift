@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SafariServices
 let reuseIdentifier_Shot = "ShotCollectionViewCell"
 
 class ShotCollectionViewController: UICollectionViewController{
@@ -30,6 +30,7 @@ class ShotCollectionViewController: UICollectionViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView?.delaysContentTouches = true
     }
     
     func loadShots(){
@@ -47,6 +48,11 @@ class ShotCollectionViewController: UICollectionViewController{
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(ShotCollectionViewController.refreshInvoked(_:)), for: UIControlEvents.valueChanged)
         collectionView?.addSubview(refreshControl)
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(sendToProfile(gesture:)) )
+        tapRecognizer.delaysTouchesBegan = true
+        tapRecognizer.cancelsTouchesInView = false
+        collectionView?.addGestureRecognizer(tapRecognizer)
     }
     
     func refreshInvoked(_ sender:AnyObject) {
@@ -88,6 +94,7 @@ class ShotCollectionViewController: UICollectionViewController{
         cell.designerName.text = shot.designerName
         cell.viewLabel.text = String(shot.shotCount)
         
+        cell.designerUrl = shot.designerUrl
         
         if shots.count - 1 == indexPath.row && shotPages < 5 {
             shotPages += 1
@@ -187,4 +194,40 @@ class ShotCollectionViewController: UICollectionViewController{
         parent?.present(vc, animated: true, completion: nil)
 //        self.parentNavigationController.pushViewController(vc, animated: true)
     }
+    
+    func sendToProfile(gesture: UITapGestureRecognizer) {
+        var didSend = false
+        if gesture.state == UIGestureRecognizerState.ended {
+            let point:CGPoint = gesture.location(in: collectionView)
+            let indexPath = collectionView?.indexPathForItem(at: point)
+            
+            if indexPath != nil {
+                let cell = collectionView?.cellForItem(at: indexPath!) as! ShotCollectionViewCell
+                let subViewRect = cell.designerIcon.frame
+                
+                //convert the gesture location to the designer icon's coordinate system, to check if the tap occurred within that frame
+                let altPoint = collectionView?.convert(point, to: cell.designerIcon)
+                if (subViewRect.contains(altPoint!)) {
+                    
+                    if #available(iOS 9.0, *) {
+                        let webVC = SFSafariViewController(url: URL(string:cell.designerUrl!)!)
+                        self.present(webVC, animated: true, completion: nil)
+                        didSend = true
+                    } else {
+                        let webVC = WebViewController()
+                        webVC.pageUrl = cell.designerUrl!
+                        self.present(webVC, animated: true, completion: nil)
+                        didSend = true
+                    }
+                    
+                }
+            }
+        }
+        if !didSend {
+            let point:CGPoint = gesture.location(in: collectionView)
+            let indexPath = collectionView?.indexPathForItem(at: point)
+            collectionView(collectionView!, didSelectItemAt: indexPath!)
+        }
+    }
 }
+

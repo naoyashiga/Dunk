@@ -15,7 +15,7 @@ class ShotCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var designerIcon: UIImageView!
     @IBOutlet weak var viewLabel: UILabel!
     @IBOutlet weak var viewUnitLabel: UILabel!
-
+    var designerUrl: String?
 //    @IBOutlet weak var animatedImageView: FLAnimatedImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
